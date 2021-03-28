@@ -1,0 +1,37 @@
+//==||----------||==\\
+//==||--MEDIA---||==\\
+//==||----------||==\\
+
+
+//--|| Import ||---------------------
+@import 'colors.scss';
+//-----------------------------------
+
+//--|| Screen Variables ||-----------
+$scr-tiny: 590px;
+$scr-small: 768px;
+$scr-med: 992px;
+$scr-lg: 1260px;
+
+//--|| #(m)# Log ||----------------------
+//  *** Header
+//      *   banner-container
+//          *   logo-container
+//              *   logo-img
+//          *   phone-container
+//          *   contact-container, support-container
+//          *   search-container
+//          *   search
+//              *   search-input
+//              *   search-button-btn
+//          *   menu-container
+//      *   nav-container
+//          *   nav-link
+//          *   dropdown-container
+//
+//  *** Body
+//      **  Carousel
+//          *   carousel-text
+//              *   p
+//              *   carousel-button
+//-----------------------------------

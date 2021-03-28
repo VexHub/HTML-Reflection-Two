@@ -1,0 +1,463 @@
+//==||----------||==\\
+//==||--HEADER--||==\\
+//==||----------||==\\
+
+//--> NOTES |
+// * Media queries are marked with '#(m)#'. These are proceeded by properties that change with media queries. |
+
+
+//--|| Import ||---------------------
+@import 'colors.scss';
+@import 'media.scss';
+//-----------------------------------
+
+//--|| Mixins ||---------------------
+@mixin bannerButton($color-base, $color-hover) {    //--> Used on 
+
+    justify-content: center;
+    align-items: center;
+    background-color: $color-base;
+    height: 44.4px;
+    line-height: 46px;
+    font-size: 1.125rem;
+    color: $white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-hover;
+    }
+    //-- Icon properties
+    .fas,
+    .far {
+
+        font-size: 1.438rem;
+        padding-left: 3px;
+        padding-right: 3px;
+
+    }
+
+}
+
+//--
+
+//--|| Setup ||----------------------
+
+.dropdown {
+
+    display: none;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0;
+    line-height: 2.813rem;
+    z-index: 2;
+    cursor: pointer;
+    //-- Dropdown menu item properties
+    li {
+
+        &::after {
+
+            content: "-";
+            padding-left: 30px;
+
+        }
+        &:nth-of-type(n+2) {
+            padding-left: 30px;
+        }
+        &:last-of-type::after {
+            content: none;
+        }
+
+    }
+
+}
+
+//-----------------------------------
+
+//--|| Header ||---------------------
+.header-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+//-----------------------------------
+
+
+//--|| Banner ||---------------------
+.banner-container {
+
+    display: flex;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    align-items: center;
+    flex-wrap: wrap;
+    //#(m)#
+    justify-content: right;
+    @media (min-width: $scr-small) {
+        justify-content: center;
+    }
+
+}
+
+.logo-container {
+
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
+    //#(m)#
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin-left: 20px;
+    @media (min-width: $scr-small) {
+
+        width: 345px;
+        height: 60.067px;
+        margin-left: 0;
+
+    }
+    @media (min-width: $scr-med) {
+
+        width: 374px;
+        height: 65.15px;
+
+    }
+    @media (min-width: $scr-lg) {
+
+        width: 370px;
+        height: 64.4167px;
+
+    }
+
+}
+
+.logo-img {
+
+    //#(m)#
+    width: 100%;
+    @media (min-width: $scr-tiny) {
+
+        width: 402px;
+        height: 70px;
+
+    }
+    @media (min-width: $scr-small) {
+
+        width: 345px;
+        height: 60.067px;
+
+    }
+    @media (min-width: $scr-med) {
+
+        width: 374px;
+        height: 65.15px;
+
+    }
+    @media (min-width: $scr-lg) {
+        
+        width: 374px;
+        height: 65.15px;
+
+    }
+
+}
+
+.phone-container {
+
+    .fas {
+
+    font-size: 2rem;
+    margin-left: 15px;
+    color: $darkgrey-scheme;
+    &:hover {
+        color: $almost-black;
+    }
+    cursor: pointer;
+
+    }
+    //#(m)#
+    @media (min-width: $scr-small) {
+        display: none;
+    }
+
+}
+
+.support-container {
+
+    @include bannerButton($vl-blue, $support-hover);
+    margin-left: 93px;
+
+}
+
+.contact-container {
+
+    @include bannerButton($lightgrey-scheme, $lightgrey-hover);
+    margin-left: 20px;
+
+}
+
+.contact-container,
+.support-container {
+
+    //#(m)#
+    display: none;
+    @media (min-width: $scr-med) {
+        display: flex;
+    }
+
+}
+
+.search-container {
+
+    //#(m)#
+    order: 1;
+    width: 100%;
+    margin-left: 20px;
+    height: 47px;
+    @media (min-width: $scr-small) {
+
+        order: 0;
+        width: initial;
+        height: 56px;
+        margin-left: 55px;
+
+    }
+    @media (min-width: $scr-med) {
+        margin-left: 20px;
+    }
+
+}
+
+.search {
+    display: flex;
+    height: 34px;
+}
+
+#search-input {
+
+    padding: 5px 15px;
+    border-style: solid;
+    color: #555;
+    font-size: 0.875rem;
+    width: 100%; //208.4px
+    //#(m)#
+    background-color: rgba(0,0,0,.1);
+    border: 1.6px solid rgba(0,0,0,.1);
+    border-width: 1.6px 0 1.6px 1.6px;
+    height: 34px;
+    &:focus {
+        box-shadow: none;
+    }
+    @media (min-width: $scr-small) {
+
+        width: 142px;
+        background-color: #fff;
+        height: 44.4px;
+        border-width: 0.8px;
+        border-color: $offwhite;
+        &:focus {
+
+            border-color: #5bc0de;
+            box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6);
+
+        }
+
+    }
+    @media (min-width: $scr-med) {
+        display: none;
+    }
+    @media (min-width: $scr-lg) {
+        display: inline-block;
+        width: 208px;
+    }
+
+}
+
+.search-button-btn {
+
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    .fas {
+
+        font-size: 1.4375rem;
+        color: $white;
+
+    }
+    // #(m)#
+    height: 47px;
+    padding: 0px 20px 0px;
+    margin-right: 20px;
+    background-color: rgba(0,0,0,.1);
+    border: 1.6px solid rgba(0,0,0,.1);
+    border-width: 1.6px 1.6px 1.6px 0;
+    &:hover {
+        background-color: rgba(0,0,0,.1);
+    }
+    @media (min-width: $scr-small) {
+
+        border: none;
+        padding: 7px 20px 3px;
+        height: 56px;
+        margin-right: 0;
+        background-color: $lightgrey-scheme;
+        &:hover {
+            background-color: $lightgrey-hover;
+        }
+
+    }
+
+}
+
+.menu-container {
+
+    //#(m)#
+    margin-right: 20px;
+    @media (min-width: $scr-small) {
+        margin-right: 0px;
+    }
+
+}
+
+.menu-button {
+
+    display: flex;
+    flex-direction: column;
+    background-color: $darkgrey-scheme;
+    border: none;
+    border-radius: 3px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: .75rem;
+    padding: 5px 15px;
+    height: 56px;
+    justify-content: center;
+    margin-left: 20px;
+    align-items: center;
+    cursor: pointer;
+    span {
+
+        font-size: 21px;
+        transform: scaleX(2);
+
+    }
+    &:hover {
+        background-color: $menu-hover;
+    }
+
+}
+
+//-----------------------------------
+
+
+//--|| Navbar ||---------------------
+
+// Navbar
+.nav-container {
+
+    justify-content: center;
+    width: 100%;
+    background-color: $darkgrey-scheme;
+    position: relative;
+    //#(m)#
+    display: none;
+    @media (min-width: $scr-med) {
+        display: inline-flex;
+    }
+
+}
+
+.nav-link {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    border-left: 1px solid rgba($white, 0.1);
+    border-right: 1px solid rgba(0,0,0, 0.25);
+    padding-top: 17px;
+    padding-bottom: 17px;
+    font-size: 1.125rem;
+    cursor: pointer;
+    .fas {
+
+        font-size: 1.438rem;
+        padding-bottom: 10px;
+
+    }
+    span {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    small {
+
+        font-size: 0.625rem;
+        line-height: 1;
+
+    }
+    &:hover .dropdown {
+        display: flex;
+    } 
+    //#(m)#
+    width: 154px;
+    @media (min-width: $scr-lg) {
+        width: 196px;
+    }
+    
+}
+
+
+.web-link {
+    @include navButtonScheme($vl-purple, $vd-purple);
+}
+
+.it-link {
+    @include navButtonScheme($vl-blue, $vd-blue);
+}
+
+.tele-link {
+    @include navButtonScheme($vl-red, $vd-red);
+}
+
+.soft-link {
+    @include navButtonScheme($vl-grey, $vd-grey);
+}
+
+.market-link {
+    @include navButtonScheme($vl-green, $vd-green);
+}
+
+.secur-link {
+    @include navButtonScheme($vl-pink, $vd-pink);
+}
+
+.dropdown-container {
+
+    width: 99vw;
+    position: absolute;
+    margin-top: 99px;
+    display: block;
+    left: 0;
+    //#(m)#
+    font-size: .8125rem;
+    @media (min-width: $scr-lg) {
+        font-size: 1rem;
+    }
+
+}
+
+//--
+
+//-----------------------------------
+

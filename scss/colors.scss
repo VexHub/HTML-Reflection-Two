@@ -1,0 +1,88 @@
+//==||----------||==\\
+//==||--COLORS--||==\\
+//==||----------||==\\
+
+
+//--|| Import ||---------------------
+
+//-----------------------------------
+
+
+//--|| Variables ||------------------
+
+// Simple Colors
+$white: #fff;
+$grey: #666;
+$offwhite: #ccc;
+//--
+
+// Greyscale
+$lightgrey-scheme: #999aa2;
+$lightgrey-hover: #84858f;
+$darkgrey-scheme: #333645;
+$menu-hover: #22242e;
+$supergrey-scheme: #191a22;
+$almost-black: #121419;
+
+//--
+
+// Scheme Colors
+$vl-blue: #4183d7; 
+$vd-blue: #286abd;
+
+$vl-purple: #926fb1; 
+$vd-purple: #79539a;
+
+$vl-red: #d64541;
+$vd-red: #bc2c28;
+
+$vl-grey: #67809f;
+$vd-grey: #526781;
+
+$vl-green: #2ecc71;
+$vd-green: #25a25a;
+
+$vl-pink: #f62459;
+$vd-pink: #de093f;
+
+//--
+
+// Misc
+
+$chathead-blue: #509bd6;
+$support-hover: #2a6ec6; 
+
+//--
+
+//-----------------------------------
+
+
+//--|| Mixins ||------------------
+
+// Color Scheme (for navbar buttons)
+@mixin navButtonScheme($colorOne, $colorTwo) {
+
+    .fas {
+        color: $colorTwo;
+    }
+
+    &:hover {
+        background-color: $colorOne;
+    }
+
+    &:hover .fas {
+        color: $white;
+    }
+
+    &:hover .dropdown {
+
+        background-color: $colorTwo;
+        display: flex;
+
+    }
+
+}
+
+//--
+
+//-----------------------------------

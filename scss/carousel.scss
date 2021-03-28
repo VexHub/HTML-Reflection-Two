@@ -1,0 +1,99 @@
+//==||----------||==\\
+//==||-CAROUSEL-||==\\
+//==||----------||==\\
+
+//--> NOTES |
+// * Media queries are marked with '#(m)#'. These are proceeded by properties that change with media queries. |
+
+
+//--|| Import ||---------------------
+@import 'colors.scss';
+@import 'media.scss';
+//-----------------------------------
+
+//--|| Rules ||----------------------
+#carousel {
+    position: relative;
+}
+.carousel-img-container {
+
+    width: 100%;
+    height: 490px + 185px;
+    overflow: hidden;
+
+}
+
+.carousel-img {
+    vertical-align: middle;
+}
+
+.carousel-text {
+    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    color: $white;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, rgba(#000,1), rgba(#000,0.0));
+    p {
+
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+        margin: 0 9.58% 35px;
+        text-transform: none;
+        text-align: center; //--> #(m)#
+
+    }
+    h1 {
+
+        font-size: 3rem;
+        margin: 0 9.58% 25px;
+
+    }
+    //#(m)#
+    align-items: center;
+    @media (min-width: $scr-med) {
+
+        align-items: flex-start;
+        p {
+            text-align: left;
+        }
+
+    }
+    
+}
+
+.carousel-button {
+
+    color: $white;
+    background-color: $vl-purple;
+    border-color: $vl-purple;
+    line-height: 50px;
+    height: auto;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+    border-radius: 3px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 183px;
+    &:hover {
+        background-color: $vd-purple;
+    }
+    //#(m)#
+    margin-left: 0;
+    @media (min-width: $scr-med) {
+        margin-left: 9.58%;
+    }
+
+}
+
+
+//-----------------------------------
