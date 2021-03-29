@@ -1,0 +1,83 @@
+//==||----------||==\\
+//==||---NEWS---||==\\
+//==||----------||==\\
+
+//--|| Import ||---------------------
+@import 'colors.scss';
+@import 'media.scss';
+//-----------------------------------
+
+
+//--|| Break Div ||------------------
+.break-div {
+    height: 104px;
+    text-transform: uppercase;
+    color: $darkgrey-scheme;
+    background-color: $white;
+    font-size: 1.25rem;
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    * {
+        margin-left: 15px;
+    }
+    span {
+        height: 5px;
+        background-color: $darkgrey-scheme;
+        width: 72px;
+        top: calc(100% - 5px);;
+        left: 0;
+        position: absolute;
+        display: inline-block;
+    }
+    h4 {
+        padding: 40px 0;
+    }
+}
+
+
+//-----------------------------------
+
+
+//--|| News Cards ||-----------------
+.news-cards {
+    display: flex;
+    background-color: $white;
+    justify-content: center;
+}
+
+.card-news {
+    width: 370px;
+    height: 613px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.news-img-container {
+    width: 370px;
+    height: 214px;
+    transition: all .25s cubic-bezier(.215,.61,.355,1);
+    position: relative;
+    
+    img {
+        width: 370px;
+        height: 214px;
+    }
+    p {
+        background-color: $vl-red;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        color: $white;
+        font-size: .75rem;
+        line-height: 1.438rem;
+        padding: 0 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+    
+
+//-----------------------------------

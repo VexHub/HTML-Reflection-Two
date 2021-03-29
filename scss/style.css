@@ -1069,4 +1069,74 @@ body {
 .about-button:hover {
   background-color: #ebebeb;
 }
+
+.break-div {
+  height: 104px;
+  text-transform: uppercase;
+  color: #333645;
+  background-color: #fff;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.break-div * {
+  margin-left: 15px;
+}
+
+.break-div span {
+  height: 5px;
+  background-color: #333645;
+  width: 72px;
+  top: calc(100% - 5px);
+  left: 0;
+  position: absolute;
+  display: inline-block;
+}
+
+.break-div h4 {
+  padding: 40px 0;
+}
+
+.news-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-news {
+  width: 370px;
+  height: 613px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.news-img-container {
+  width: 370px;
+  height: 214px;
+  -webkit-transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: relative;
+}
+
+.news-img-container img {
+  width: 370px;
+  height: 214px;
+}
+
+.news-img-container p {
+  background-color: #d64541;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  color: #fff;
+  font-size: .75rem;
+  line-height: 1.438rem;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
