@@ -1,17 +1,79 @@
+//==||----------||==\\
+//==||---ABOUT--||==\\
+//==||----------||==\\
+
+//--|| Import ||---------------------
+@import 'colors.scss';
+@import 'media.scss';
+//-----------------------------------
+
 #about-section {
     width: 100%;
     height: 552px;
-    
-    background-image: url(../resources/img/branded.png);
+    background-color: $darkgrey-scheme;
+    color: $white;
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: auto 100%;
-    background-color: $darkgrey-scheme;
-    color: $white;
+    //#(m)#
+    background-image: none;
+    @media (min-width: $scr-med) {
+        background-image: url(../resources/img/branded.png);
+    }
+}
+
+.about-area {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    //#(m)#
+    width: 100%;
+    @media (min-width: $scr-small) {
+        width: 720px;
+    }
+    @media (min-width: $scr-med) {
+        width: 940px;
+    }
+    @media (min-width: $scr-lg) {
+        width: 1200px;
+    }
 }
 
 .about-text {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    width: 560px;
+    p {
+        line-height: 1.875rem;
+    }
+    p:first-of-type {
+        font-weight: bold;
+    }
+}
+
+.about-h1 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+.about-button {
+    font-size: 1.063rem;
+    background-color: $white;
+    text-transform: uppercase;
+    color: $darkgrey-scheme;
+    width: 141px;
+    height: 35px;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+        background-color: #ebebeb;
+    }
 }
