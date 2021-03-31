@@ -1,0 +1,134 @@
+//==||---------------||==\\
+//==||--STYLE NOTES--||==\\
+//==||---------------||==\\
+
+// This section talks on the rules for styling for the SCSS. //
+//   Please make sure to follow these as much as possible.   //
+
+
+//** File Order **//
+
+*   The order of the file should go:
+        -   Title header
+        -   Page notes
+        -   Imports
+        -   Variables (where applicable)
+        -   Mixins (where applicable)
+        -   Functions (where applicable)
+        -   Style sections (in DOM order)
+        -   Logs (where applicable)
+
+
+//** Sections **//
+
+*   Each SCSS file should start with a header, for quick identification.
+            //==||----------||==\\
+            //==||----------||==\\
+            //==||----------||==\\
+    The title should be on the second line, and should be as centred as possible.
+    Exceptions: Style_notes, style.scss
+
+*   If there are any notes for the whole page, these should come next.
+    They should be headed with this:
+            //--> NOTES |
+    The notes should be contained within this:
+            // * 'Note goes here' |
+
+*   Any main section after this should be headed with this:
+            //--|| Title ||----------------------
+    And ended with this:
+            //-----------------------------------
+    These should always take up the same amount of characters. Add or remove
+    dashes from end to fit. Each section should be separated by a double-space.
+
+*   Sub-sections should be headed with:
+            // Title
+    And ended with:
+            //--
+    Each sub-section should be separated by a single-space.
+
+*   Each section and sub-section should be arranged in DOM order.
+
+
+//** Selectors **//
+
+*   Selectors should appear in DOM order, where possible.
+
+*   Nested selectors should not go more than two deep.
+
+*   Nested selectors and properties should go in this order, where possible:
+    -   Properties unrelated to media query changes
+    -   Nested selector properties unrelated to media query changes
+    -   Pseudo-classes / elements unrelated to media query changes
+    -   Properties that will change with media queries
+    -   Nested selector properties that will change with media queries
+    -   Pseudo-classes / elements that will change with media queries
+    -   Non-size-related media queries, with non-nested before nested, before pseudos
+    -   Size-related media queries in size order, with non-nested before nested,
+        before pseudos
+
+*   Each nested selector that takes up more than two lines should be
+    preceded and followed by a blank line.
+
+*   Where these orders cannot be followed, a '//OOO//' note should be made next
+    to it, along with a note on why.
+
+
+//** Properties **//
+
+*   Where possible, properties within each section of the order above should
+    follow this order:
+    -   Display properties
+    -   Position properties
+    -   Z-Index
+    -   Overflow
+    -   Box-model properties, including margin and padding
+    -   Background properties
+    -   Border properties
+    -   Text properties
+    -   Cursor property
+    -   Other
+
+*   Each time a variable, mixin or function is used, a note with the file it comes
+    from should come after it.
+
+*   There should be a single space between the property and the value / keyword.
+
+
+//** Notes **//
+
+*   Each time properties which will change with media queries are presented, a 
+    '#(m)#' note should be put above them.
+
+*   Notes which explain what multiple lines of code are (or do) should be made
+    above the lines in this format:
+            //- Note goes here -
+    When the lines of code are finished, they should be followed up with a notes
+    in this format:
+            //-/
+
+*   A single-line comment should be made in this format:
+            //--> Note goes here
+
+*   Notes to show a piece of code that is experimental should be in this format:
+            //--!! Note goes here
+
+
+//** Logs **//
+
+*   A log should be made for each variable, mixin, function, and the '#(m)#'
+    note. These should be made on the corresponding file in which they are
+    defined.
+
+*   They log should be headed in this format:
+            //--|| 'Title' Log ||----------------
+    And should be followed with this:
+            //-----------------------------------
+    These should always contain the same amount of characters. Add or remove
+    dashes from end to fit.
+
+*   They log should be made in this format: 
+            //  *** file_name.scss
+            //      *   selector containing rule
+            //          *   nested selector containing rule
+            //  *** next_file_name.scss
