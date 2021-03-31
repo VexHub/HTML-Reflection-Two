@@ -9,33 +9,29 @@
 //-----------------------------------
 
 
-//--|| Setup ||----------------------
+//--|| Body Styles ||----------------------
 
 // Whole Document
-html * {
+html {
+    overflow-x: hidden;
+    font-size: 16px;
+}
 
+html * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
 }
-
-html {
-    font-size: 16px;
-    overflow-x: hidden;
-}
-
 //--
 
 // Body
 body {
 
-    background-color: $white;
+    background-color: $white; //--> from colors.scss
+    color: $grey; //--> from colors.scss
     letter-spacing: .4px;
     line-height: 1.42857143;
-    color: $grey;
 
 }
-
 //--
 
 //-----------------------------------

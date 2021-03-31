@@ -2,106 +2,75 @@
 //==||--HEADER--||==\\
 //==||----------||==\\
 
-//--> NOTES |
-// * Media queries are marked with '#(m)#'. These are proceeded by properties that change with media queries. |
-
 
 //--|| Import ||---------------------
 @import 'colors.scss';
 @import 'media.scss';
 //-----------------------------------
 
+
 //--|| Mixins ||---------------------
-@mixin bannerButton($color-base, $color-hover) {    //--> Used on 
+
+@mixin bannerButton($color-base, $color-hover) {
 
     justify-content: center;
     align-items: center;
-    background-color: $color-base;
     height: 44.4px;
-    line-height: 46px;
-    font-size: 1.125rem;
-    color: $white;
     padding: 5px 15px;
+    background-color: $color-base;
     border-radius: 3px;
-    cursor: pointer;
-    &:hover {
-        background-color: $color-hover;
-    }
-    //-- Icon properties
+    color: $white; //--> from colors.scss
+    font-size: 1.125rem;
+    line-height: 46px;
+    cursor: pointer; 
+    //- Icon properties -
     .fas,
     .far {
 
-        font-size: 1.438rem;
         padding-left: 3px;
         padding-right: 3px;
+        font-size: 1.438rem;
 
     }
-
-}
-
-//--
-
-//--|| Setup ||----------------------
-
-.dropdown {
-
-    display: none;
-    position: absolute;
-    top: 100%;
-    list-style: none;
-    min-width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding-inline-start: 0;
-    line-height: 2.813rem;
-    z-index: 2;
-    cursor: pointer;
-    //-- Dropdown menu item properties
-    li {
-
-        &::after {
-
-            content: "-";
-            padding-left: 30px;
-
-        }
-        &:nth-of-type(n+2) {
-            padding-left: 30px;
-        }
-        &:last-of-type::after {
-            content: none;
-        }
-
+    //-/
+    //- Pseudos -
+    &:hover {
+        background-color: $color-hover;
     }
+    //-/
 
 }
 
 //-----------------------------------
 
+
 //--|| Header ||---------------------
+
 .header-container {
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-transform: uppercase;
     font-weight: 400;
+    text-transform: uppercase;
 
 }
+
 //-----------------------------------
 
 
 //--|| Banner ||---------------------
+
 .banner-container {
 
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     padding-top: 22px;
     padding-bottom: 23px;
-    align-items: center;
-    flex-wrap: wrap;
     //#(m)#
     justify-content: right;
-    @media (min-width: $scr-small) {
+    @media (min-width: $scr-small) { //--> from media.scss
         justify-content: center;
     }
 
@@ -116,24 +85,20 @@
     flex-basis: 200px;
     flex-grow: 1;
     margin-left: 20px;
-    @media (min-width: $scr-small) {
+    @media (min-width: $scr-small) { //--> from media.scss
 
         width: 345px;
         height: 60.067px;
         margin-left: 0;
 
     }
-    @media (min-width: $scr-med) {
-
+    @media (min-width: $scr-med) { //--> from media.scss
         width: 374px;
         height: 65.15px;
-
     }
-    @media (min-width: $scr-lg) {
-
+    @media (min-width: $scr-lg) { //--> from media.scss
         width: 370px;
         height: 64.4167px;
-
     }
 
 }
@@ -142,48 +107,40 @@
 
     //#(m)#
     width: 100%;
-    @media (min-width: $scr-tiny) {
-
+    @media (min-width: $scr-tiny) { //--> from media.scss
         width: 402px;
         height: 70px;
-
     }
-    @media (min-width: $scr-small) {
-
+    @media (min-width: $scr-small) { //--> from media.scss
         width: 345px;
         height: 60.067px;
-
     }
-    @media (min-width: $scr-med) {
-
+    @media (min-width: $scr-med) { //--> from media.scss
         width: 374px;
         height: 65.15px;
-
     }
-    @media (min-width: $scr-lg) {
-        
+    @media (min-width: $scr-lg) { //--> from media.scss
         width: 374px;
         height: 65.15px;
-
     }
 
 }
 
 .phone-container {
 
-    .fas {
+    .fas { //--> phone icon
 
-    font-size: 2rem;
-    margin-left: 15px;
-    color: $darkgrey-scheme;
-    &:hover {
-        color: $almost-black;
-    }
-    cursor: pointer;
+        margin-left: 15px;
+        color: $darkgrey-scheme; //--> from colors.scss
+        font-size: 2rem;
+        cursor: pointer;
+        &:hover {
+            color: $almost-black; //--> from colors.scss
+        }
 
     }
     //#(m)#
-    @media (min-width: $scr-small) {
+    @media (min-width: $scr-small) { //--> from media.scss
         display: none;
     }
 
@@ -191,14 +148,14 @@
 
 .support-container {
 
-    @include bannerButton($vl-blue, $support-hover);
+    @include bannerButton($vl-blue, $support-hover); //--> from header.scss, from colors.scss
     margin-left: 93px;
 
 }
 
 .contact-container {
 
-    @include bannerButton($lightgrey-scheme, $lightgrey-hover);
+    @include bannerButton($lightgrey-scheme, $lightgrey-hover); //--> from header.scss, from colors.scss
     margin-left: 20px;
 
 }
@@ -208,7 +165,7 @@
 
     //#(m)#
     display: none;
-    @media (min-width: $scr-med) {
+    @media (min-width: $scr-med) { //--> from media.scss
         display: flex;
     }
 
@@ -217,11 +174,11 @@
 .search-container {
 
     //#(m)#
-    order: 1;
+    order: 1; //--> changes location of search bar
     width: 100%;
-    margin-left: 20px;
     height: 47px;
-    @media (min-width: $scr-small) {
+    margin-left: 20px;
+    @media (min-width: $scr-small) { //--> from media.scss
 
         order: 0;
         width: initial;
@@ -229,7 +186,7 @@
         margin-left: 55px;
 
     }
-    @media (min-width: $scr-med) {
+    @media (min-width: $scr-med) { //--> from media.scss
         margin-left: 20px;
     }
 
@@ -242,38 +199,36 @@
 
 #search-input {
 
-    padding: 5px 15px;
+    width: 100%;
+    padding: 5px 15px; //--> left/right, top/bottom
     border-style: solid;
     color: #555;
     font-size: 0.875rem;
-    width: 100%; //208.4px
     //#(m)#
-    background-color: rgba(0,0,0,.1);
-    border: 1.6px solid rgba(0,0,0,.1);
-    border-width: 1.6px 0 1.6px 1.6px;
     height: 34px;
+    background-color: rgba(#000,.1);
+    border: 1.6px solid rgba(#000,.1);
+    border-width: 1.6px 0 1.6px 1.6px; //--> tl,tr,br,bl
     &:focus {
         box-shadow: none;
     }
-    @media (min-width: $scr-small) {
+    @media (min-width: $scr-small) { //--> from media.scss
 
         width: 142px;
-        background-color: #fff;
         height: 44.4px;
+        background-color: $white; //--> from colors.scss
+        border-color: $offwhite; //--> from colors.scss
         border-width: 0.8px;
-        border-color: $offwhite;
         &:focus {
-
             border-color: #5bc0de;
-            box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6);
-
+            box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6); //--> from colors.scss
         }
 
     }
-    @media (min-width: $scr-med) {
+    @media (min-width: $scr-med) { //--> from media.scss
         display: none;
     }
-    @media (min-width: $scr-lg) {
+    @media (min-width: $scr-lg) { //--> from media.scss
         display: inline-block;
         width: 208px;
     }
@@ -282,33 +237,31 @@
 
 .search-button-btn {
 
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0; //--> tl,tr,br,bl
     cursor: pointer;
     .fas {
-
-        font-size: 1.4375rem;
         color: $white;
-
+        font-size: 1.4375rem; 
     }
     // #(m)#
     height: 47px;
-    padding: 0px 20px 0px;
     margin-right: 20px;
-    background-color: rgba(0,0,0,.1);
-    border: 1.6px solid rgba(0,0,0,.1);
-    border-width: 1.6px 1.6px 1.6px 0;
+    padding-top: 20px;
+    background-color: rgba(#000,.1);
+    border: 1.6px solid rgba(#000,.1);
+    border-width: 1.6px 1.6px 1.6px 0; //-->tl,tr,br,bl
     &:hover {
-        background-color: rgba(0,0,0,.1);
+        background-color: rgba(#000.1);
     }
-    @media (min-width: $scr-small) {
+    @media (min-width: $scr-small) { //--> from media.scss
 
-        border: none;
-        padding: 7px 20px 3px;
         height: 56px;
         margin-right: 0;
-        background-color: $lightgrey-scheme;
+        padding: 7px 20px 3px;
+        background-color: $lightgrey-scheme; //--> from colors.scss
+        border: none;
         &:hover {
-            background-color: $lightgrey-hover;
+            background-color: $lightgrey-hover; //--> from colors.scss
         }
 
     }
@@ -319,7 +272,7 @@
 
     //#(m)#
     margin-right: 20px;
-    @media (min-width: $scr-small) {
+    @media (min-width: $scr-small) { //--> from media.scss
         margin-right: 0px;
     }
 
@@ -329,26 +282,24 @@
 
     display: flex;
     flex-direction: column;
-    background-color: $darkgrey-scheme;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    margin-left: 20px;
+    padding: 5px 15px; //--> left/right, top/bottom
+    background-color: $darkgrey-scheme; //--> from colors.scss
     border: none;
     border-radius: 3px;
-    color: $white;
-    text-transform: uppercase;
+    color: $white; //--> from colors.scss
     font-size: .75rem;
-    padding: 5px 15px;
-    height: 56px;
-    justify-content: center;
-    margin-left: 20px;
-    align-items: center;
+    text-transform: uppercase;
     cursor: pointer;
     span {
-
         font-size: 21px;
         transform: scaleX(2);
-
     }
     &:hover {
-        background-color: $menu-hover;
+        background-color: $menu-hover; //--> from colors.scss
     }
 
 }
@@ -361,13 +312,12 @@
 // Navbar
 .nav-container {
 
-    justify-content: center;
-    width: 100%;
-    background-color: $darkgrey-scheme;
     position: relative;
+    width: 100%;
+    background-color: $darkgrey-scheme; //--> from colors.scss
     //#(m)#
     display: none;
-    @media (min-width: $scr-med) {
+    @media (min-width: $scr-med) { //--> from media.scss
         display: inline-flex;
     }
 
@@ -376,22 +326,20 @@
 .nav-link {
 
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: $white;
-    border-left: 1px solid rgba($white, 0.1);
-    border-right: 1px solid rgba(0,0,0, 0.25);
     padding-top: 17px;
     padding-bottom: 17px;
+    border-left: 1px solid rgba($white, 0.1); //--> from colors.scss
+    border-right: 1px solid rgba(#000, 0.25);
+    color: $white; //--> from colors.scss
     font-size: 1.125rem;
     cursor: pointer;
     .fas {
-
-        font-size: 1.438rem;
         padding-bottom: 10px;
-
+        font-size: 1.438rem;
     }
     span {
 
@@ -401,17 +349,15 @@
 
     }
     small {
-
         font-size: 0.625rem;
         line-height: 1;
-
     }
     &:hover .dropdown {
         display: flex;
     } 
     //#(m)#
     width: 154px;
-    @media (min-width: $scr-lg) {
+    @media (min-width: $scr-lg) { //--> from media.scss
         width: 196px;
     }
     
@@ -419,41 +365,71 @@
 
 
 .web-link {
-    @include navButtonScheme($vl-purple, $vd-purple);
+    @include navButtonScheme($vl-purple, $vd-purple); //--> from colors.scss
 }
 
 .it-link {
-    @include navButtonScheme($vl-blue, $vd-blue);
+    @include navButtonScheme($vl-blue, $vd-blue); //--> from colors.scss
 }
 
 .tele-link {
-    @include navButtonScheme($vl-red, $vd-red);
+    @include navButtonScheme($vl-red, $vd-red); //--> from colors.scss
 }
 
 .soft-link {
-    @include navButtonScheme($vl-grey, $vd-grey);
+    @include navButtonScheme($vl-grey, $vd-grey); //--> from colors.scss
 }
 
 .market-link {
-    @include navButtonScheme($vl-green, $vd-green);
+    @include navButtonScheme($vl-green, $vd-green); //--> from colors.scss
 }
 
 .secur-link {
-    @include navButtonScheme($vl-pink, $vd-pink);
+    @include navButtonScheme($vl-pink, $vd-pink); //--> from colors.scss
 }
 
 .dropdown-container {
 
-    width: 99vw;
     position: absolute;
-    margin-top: 99px;
-    display: block;
     left: 0;
+    width: 99vw;
+    margin-top: 99px;
     //#(m)#
     font-size: .8125rem;
-    @media (min-width: $scr-lg) {
+    @media (min-width: $scr-lg) { //--> from media.scss
         font-size: 1rem;
     }
+
+}
+
+.dropdown {
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    z-index: 2; //--> moves in front of carousel
+    min-width: 100%;
+    list-style: none;
+    line-height: 2.813rem;
+    cursor: pointer;
+    //- Dropdown menu item properties -
+    li {
+
+        &::after {
+            content: "-"; //--> adds dash to dropdown items
+            padding-left: 30px;
+        }
+        &:nth-of-type(n+2) {
+            padding-left: 30px;
+        }
+        &:last-of-type::after {
+            content: none; //--> stops dash at end of list
+        }
+
+    }
+    //-/
 
 }
 
@@ -461,3 +437,9 @@
 
 //-----------------------------------
 
+
+//--|| @ bannerButton Log ||---------
+//  *** header.scss
+//      *   .support-container
+//      *   .banner-container
+//-----------------------------------
