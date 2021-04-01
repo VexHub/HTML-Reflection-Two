@@ -2,10 +2,10 @@
   width: 100%;
   height: 552px;
   background-color: #333645;
-  color: #fff;
   background-repeat: no-repeat;
   background-position: 100%;
   background-size: auto 100%;
+  color: #fff;
   background-image: none;
 }
 
@@ -51,10 +51,10 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-left: 15px;
-  padding-right: 15px;
   height: 100%;
   width: 560px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .about-text p {
@@ -71,13 +71,6 @@
 }
 
 .about-button {
-  font-size: 1.063rem;
-  background-color: #fff;
-  text-transform: uppercase;
-  color: #333645;
-  width: 141px;
-  height: 35px;
-  padding: 5px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +84,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 141px;
+  height: 35px;
+  padding: 5px 15px;
+  background-color: #fff;
+  color: #333645;
+  font-size: 1.063rem;
+  text-transform: uppercase;
   cursor: pointer;
 }
 

@@ -2,57 +2,66 @@
 //==||---ABOUT--||==\\
 //==||----------||==\\
 
+
 //--|| Import ||---------------------
 @import 'colors.scss';
 @import 'media.scss';
 //-----------------------------------
 
+
+//--|| Rules ||---------------------
 #about-section {
+
     width: 100%;
     height: 552px;
-    background-color: $darkgrey-scheme;
-    color: $white;
+    background-color: $darkgrey-scheme; //--> from colors.scss
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: auto 100%;
+    color: $white; //--> from colors.scss
     //#(m)#
     background-image: none;
-    @media (min-width: $scr-med) {
+    @media (min-width: $scr-med) { //--> from media.scss
         background-image: url(../resources/img/branded.png);
     }
+
 }
 
 .about-area {
+
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     //#(m)#
     width: 100%;
-    @media (min-width: $scr-small) {
+    @media (min-width: $scr-small) { //--> from media.scss
         width: 720px;
     }
-    @media (min-width: $scr-med) {
+    @media (min-width: $scr-med) { //--> from media.scss
         width: 940px;
     }
-    @media (min-width: $scr-lg) {
+    @media (min-width: $scr-lg) { //--> from media.scss
         width: 1200px;
     }
+
 }
 
 .about-text {
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-left: 15px;
-    padding-right: 15px;
     height: 100%;
     width: 560px;
+    padding-left: 15px;
+    padding-right: 15px;
     p {
         line-height: 1.875rem;
     }
     p:first-of-type {
         font-weight: bold;
     }
+
 }
 
 .about-h1 {
@@ -61,19 +70,23 @@
 }
 
 .about-button {
-    font-size: 1.063rem;
-    background-color: $white;
-    text-transform: uppercase;
-    color: $darkgrey-scheme;
-    width: 141px;
-    height: 35px;
-    padding: 5px 15px;
+
     display: flex;
     flex-direction: center;
     justify-content: space-between;
     align-items: center;
+    width: 141px;
+    height: 35px;
+    padding: 5px 15px;
+    background-color: $white; //--> from colors.scss
+    color: $darkgrey-scheme; //--> from colors.scss
+    font-size: 1.063rem;
+    text-transform: uppercase;
     cursor: pointer;
     &:hover {
         background-color: #ebebeb;
     }
+
 }
+
+//-----------------------------------
