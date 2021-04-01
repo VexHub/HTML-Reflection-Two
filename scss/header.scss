@@ -251,7 +251,7 @@
     border: 1.6px solid rgba(#000,.1);
     border-width: 1.6px 1.6px 1.6px 0; //-->tl,tr,br,bl
     &:hover {
-        background-color: rgba(#000.1);
+        background-color: rgba(#000,0.1);
     }
     @media (min-width: $scr-small) { //--> from media.scss
 

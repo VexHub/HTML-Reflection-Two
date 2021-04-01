@@ -3,13 +3,12 @@
 //==||--CARDS---||==\\
 //==||----------||==\\
 
-//--> NOTES |
-// * Media queries are marked with '#(m)#'. These are proceeded by properties that change with media queries. |
 
 //--|| Import ||---------------------
 @import 'colors.scss';
 @import 'media.scss';
 //-----------------------------------
+
 
 //--|| Rules ||----------------------
 #service-cards {
@@ -19,9 +18,8 @@
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 50px;
-    
     //#(m)#
-    @media (min-width: $scr-lg) {
+    @media (min-width: $scr-lg) { //--> from media.scss
         .top-row {
             flex: 0 0 308px;
         }
@@ -29,30 +27,36 @@
             flex: 0 0 208px;
         }
     }
-    @media (min-width: $scr-med) and (max-width: $scr-lg) {
+    @media (min-width: $scr-med) and (max-width: $scr-lg) { //--> from media.scss
+        
+        .card {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
         .top-row {
             flex: 0 0 231px;
         }
         .bottom-row {
             flex: 0 0 393px;
         }
-        .card {
-            margin-left: 15px;
-            margin-right: 15px;
-        }
+        
     }
-    @media (min-width: $scr-small) and (max-width: $scr-med) {
+    @media (min-width: $scr-small) and (max-width: $scr-med) { //--> from media.scss
+        
         .top-row {
             flex: 0 0 658px;
         }
         .bottom-row {
             flex: 0 0 283px;
         }
+
     }
-    @media (max-width: $scr-small) {
+    @media (max-width: $scr-small) { //--> from media.scss
+       
         .card {
             flex: 0 0 80%;
         }
+
     }
 
 }
@@ -64,161 +68,231 @@
     justify-content: space-evenly;
     align-items: center;
     height: min-content;
-    background-color: $white;
-    box-shadow: 0 3px 35px rgba(0,0,0,.1);
     margin-top: 30px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 30px;
     margin-left: 15px;
     margin-right: 15px;
+    padding: 30px;
+    background-color: $white; //--> from colors.scss
+    border: 1px solid $offwhite; //--> from colors.scss
+    border-radius: 3px;
+    box-shadow: 0 3px 35px rgba(#000,0.1);
+    text-align: center;
     cursor: pointer;
-    &:hover .card-icon,
-    &:hover .card-button,
-    &:hover span {
-        background-color: $white;
-    }
-    &:hover h2 {
-        color: $white;
-    }
-    p {
-        font-size: .8125rem;
-        line-height: 1.375rem;
-        margin-bottom: 13px;
-    }
     h2 {
-        font-size: 1.125rem;
-        color: $darkgrey-scheme;
-        
+        color: $darkgrey-scheme; //--> from colors.scss
+        font-size: 1.125rem; 
     }
     span {
+
         width: 28px;
         height: 3px;
-        background-color: $darkgrey-scheme;
+        background-color: $darkgrey-scheme; //--> from colors.scss
+
     }
+    p {
+
+        margin-bottom: 13px;
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        
+    }
+    &:hover .card-icon,
+    &:hover span,
+    &:hover .card-button {
+        background-color: $white; //--> from colors.scss
+    }
+    &:hover h2 {
+        color: $white; //--> from colors.scss
+    } 
     //#(m)#
     height: 228px;
-    @media (min-width: $scr-med) {
+    @media (max-width: 571px) { //--> from media.scss
+
+        &.soft-card,
+        &.market-card {
+            height: 250px;
+        }
+
+    }
+    @media (min-width: $scr-small) { //--> from media.scss
+
+        &.bottom-row {
+            height: 250px;
+        }
+
+    }
+    @media (min-width: $scr-med) { //--> from media.scss
+
         height: 294px;
-    }
-    @media (min-width: $scr-lg) {
-        height: 250px;
-    }
-    &.bottom-row {
-        @media (min-width: $scr-med) {
+        &.bottom-row {
             height: 228px;
         }
-        @media (min-width: $scr-small) {
+
+    }
+    @media (min-width: $scr-lg) { //--> from media.scss
+
+        height: 250px;
+        &.bottom-row {
             height: 250px;
         }
-    }
-    &.soft-card,
-    &.market-card {
-        @media (max-width: 571px) {
-            height: 250px;
-        }
-    }
-}
 
-.card-icon {
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 1.438rem;
-    color: $white;
-}
-
-.card-button {
-    color: $white;
-    text-transform: uppercase;
-    padding: 5px 15px;
-    font-size: 1.063rem;
-    border-radius: 3px;
-    line-height: 35px;
+    }
+    
 }
 
 .soft-card {
+
     .card-icon,
-    .card-button,
-    &:hover {
-        background-color: $vl-grey;
-        color: $white;
-        .card-icon,
-        .card-button {
-            color: $vl-grey;
-        }
+    .card-button {
+        background-color: $vl-grey; //--> from colors.scss
+        color: $white; //--> from colors.scss
     }
+
+}
+
+.soft-card:hover {
+
+    background-color: $vl-grey; //--> from colors.scss
+    color: $white; //--> from colors.scss
+    .card-icon,
+    .card-button {
+        color: $vl-grey; //--> from colors.scss
+    }
+
 }
 
 .it-card {
+
     .card-icon,
-    .card-button,
-    &:hover {
-        background-color: $vl-blue;
-        color: $white;
-        .card-icon,
-        .card-button {
-            color: $vl-blue;
-        }
+    .card-button {
+        background-color: $vl-blue; //--> from colors.scss
+        color: $white; //--> from colors.scss
     }
+
 }
 
-.market-card  {
+.it-card:hover {
+
+    background-color: $vl-blue; //--> from colors.scss
+    color: $white; //--> from colors.scss
     .card-icon,
-    .card-button,
-    &:hover {
-        background-color: $vl-green;
-        color: $white;
-        .card-icon,
-        .card-button {
-            color: $vl-green;
-        }
+    .card-button {
+        color: $vl-blue; //--> from colors.scss
     }
+
+}
+
+
+
+.market-card  {
+
+    .card-icon,
+    .card-button {
+        background-color: $vl-green; //--> from colors.scss
+        color: $white; //--> from colors.scss
+    }
+
+}
+
+.market-card:hover  {
+
+    background-color: $vl-green; //--> from colors.scss
+    color: $white; //--> from colors.scss
+    .card-icon,
+    .card-button {
+        color: $vl-green; //--> from colors.scss
+    }
+    
 }
 
 .tele-card {
+
     .card-icon,
-    .card-button,
-    &:hover {
-        background-color: $vl-red;
-        color: $white;
-        .card-icon,
-        .card-button {
-            color: $vl-red;
-        }
+    .card-button {
+        background-color: $vl-red; //--> from colors.scss
+        color: $white; //--> from colors.scss
+    }
+    
+}
+
+.tele-card:hover {
+
+    background-color: $vl-red; //--> from colors.scss
+    color: $white; //--> from colors.scss
+    .card-icon,
+    .card-button {
+        color: $vl-red; //--> from colors.scss
     }
     
 }
 
 .web-card,
 .scs-card {
+
     .card-icon,
-    .card-button,
-    &:hover {
-        background-color: $vl-purple;
-        color: $white;
-        .card-icon,
-        .card-button {
-            color: $vl-purple;
-        }
+    .card-button {
+        background-color: $vl-purple; //--> from colors.scss
+        color: $white; //--> from colors.scss
+    }
+
+}
+
+.web-card:hover,
+.scs-card:hover {
+
+    background-color: $vl-purple; //--> from colors.scss
+    color: $white; //--> from colors.scss
+    .card-icon,
+    .card-button {
+        color: $vl-purple; //--> from colors.scss
     }
 }
 
 .secur-card {
+
     .card-icon,
-    .card-button,
-    &:hover {
-        background-color: $vl-pink;
-        color: $white;
-        .card-icon,
-        .card-button {
-            color: $vl-pink;
-        }
+    .card-button {
+        background-color: $vl-pink; //--> from colors.scss
+        color: $white; //--> from colors.scss
     }
+
 }
+
+.secur-card:hover {
+
+    background-color: $vl-pink; //--> from colors.scss
+    color: $white; //--> from colors.scss
+    .card-icon,
+    .card-button {
+        color: $vl-pink; //--> from colors.scss
+    }
+
+}
+
+.card-icon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    color: $white; //--> from colors.scss
+    font-size: 1.438rem;
+    
+}
+
+.card-button {
+
+    padding: 5px 15px;
+    border-radius: 3px;
+    color: $white; //--> from colors.scss
+    font-size: 1.063rem;
+    line-height: 35px;
+    text-transform: uppercase;
+
+}
+
+
 
 //-----------------------------------

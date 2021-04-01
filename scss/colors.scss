@@ -105,6 +105,10 @@ $support-hover: #2a6ec6;
 //  *** carousel.scss
 //      **  .carousel-text
 //      **  .carousel-button
+//  *** services-cards.scss
+//      **  .card
+//      **  .card-icon
+//      **  .card-button
 //-----------------------------------
 
 
@@ -120,6 +124,28 @@ $support-hover: #2a6ec6;
 //          **@media(min-width: $scr-small)
 //      *   #search-input
 //          **  @media(min-width: $scr-small)
+//  *** services-cards.scss
+//      **  .card
+//          **  &:hover
+//              **  h2
+//      *   .soft-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//      *   .it-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//      *   .market-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//      *   .tele-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//      *   .web-card, .scs-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//      *   .secur-card
+//          **  .card-icon, .card-button
+//          **  &:hover
 //-----------------------------------
 
 
@@ -146,6 +172,10 @@ $support-hover: #2a6ec6;
 //          **  .fas
 //      **  .menu-button
 //      **  .nav-container
+//  *** services-cards.scss
+//      *   .card
+//          **  h2
+//          **  span
 //-----------------------------------
 
 
@@ -173,6 +203,10 @@ $support-hover: #2a6ec6;
 //      **  .support-container
 //      *   .it-link
 //          **  @navButtonScheme
+//      *   .it-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//              **  .card-icon, .card-button
 //-----------------------------------
 
 
@@ -189,6 +223,10 @@ $support-hover: #2a6ec6;
 //          **  @navButtonScheme
 //  *** carousel.scss
 //      **  .carousel-button (x2)
+//      *   .web-card, .scs-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//              **  .card-icon, .card-button
 //-----------------------------------
 
 
@@ -206,6 +244,10 @@ $support-hover: #2a6ec6;
 //  *** header.scss
 //      *   .tele-link
 //          **  @navButtonScheme
+//      *   .tele-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//              **  .card-icon, .card-button
 //-----------------------------------
 
 
@@ -220,6 +262,11 @@ $support-hover: #2a6ec6;
 //  *** header.scss
 //      *   .soft-link
 //          **  @navButtonScheme
+//  *** services-cards.scss
+//      *   .soft-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//              **  .card-icon, .card-button
 //-----------------------------------
 
 
@@ -234,6 +281,10 @@ $support-hover: #2a6ec6;
 //  *** header.scss
 //      *   .market-link
 //          **  @navButtonScheme
+//      *   .market-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//              **  .card-icon, .card-button
 //-----------------------------------
 
 
@@ -255,6 +306,10 @@ $support-hover: #2a6ec6;
 //  *** header.scss
 //      *   .secur-link
 //          **  @navButtonScheme
+//      *   .secur-card
+//          **  .card-icon, .card-button
+//          **  &:hover
+//              **  .card-icon, .card-button
 //-----------------------------------
 
 
