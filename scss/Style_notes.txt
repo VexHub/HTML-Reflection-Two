@@ -129,6 +129,8 @@
 
 *   They log should be made in this format: 
             //  *** file_name.scss
-            //      *   selector containing rule
-            //          *   nested selector containing rule
+            //      *   selector containing nested selector with rule
+            //          **   nested selector containing rule
             //  *** next_file_name.scss
+            //      **  selector containing rule
+            //          **   nested selector also containing rule

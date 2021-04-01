@@ -13,25 +13,18 @@ $scr-small: 768px;
 $scr-med: 992px;
 $scr-lg: 1260px;
 
-//--|| #(m)# Log ||----------------------
+//--|| #(m)# Log ||--------------------
 //  *** Header
-//      *   banner-container
-//          *   logo-container
-//              *   logo-img
-//          *   phone-container
-//          *   contact-container, support-container
-//          *   search-container
-//          *   search
-//              *   search-input
-//              *   search-button-btn
-//          *   menu-container
-//      *   nav-container
-//          *   nav-link
-//          *   dropdown-container
-//
-//  *** Body
-//      **  Carousel
-//          *   carousel-text
-//              *   p
-//              *   carousel-button
+//      **  .banner-container
+//      **  .logo-container (x3)
+//      **  .logo-img (x3)
+//      **  .phone-container
+//      **  .contact-container, .support-container
+//      **  .search-container (x2)
+//      **  .search-input (x3)
+//      **  .search-button-btn
+//      **  .menu-container
+//      **  .nav-container
+//      **  .nav-link
+//      **  .dropdown-container
 //-----------------------------------

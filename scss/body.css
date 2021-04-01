@@ -1,17 +1,17 @@
+html {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
 html * {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
-html {
-  font-size: 16px;
-  overflow-x: hidden;
-}
-
 body {
   background-color: #fff;
+  color: #666;
   letter-spacing: .4px;
   line-height: 1.42857143;
-  color: #666;
 }
 /*# sourceMappingURL=body.css.map */

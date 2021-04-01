@@ -14,6 +14,7 @@
 $white: #fff;
 $grey: #666;
 $offwhite: #ccc;
+
 //--
 
 // Greyscale
@@ -48,10 +49,8 @@ $vd-pink: #de093f;
 //--
 
 // Misc
-
 $chathead-blue: #509bd6;
 $support-hover: #2a6ec6; 
-
 //--
 
 //-----------------------------------
@@ -71,7 +70,7 @@ $support-hover: #2a6ec6;
     }
 
     &:hover .fas {
-        color: $white;
+        color: $white; //--> from colors.scss
     }
 
     &:hover .dropdown {
@@ -85,4 +84,188 @@ $support-hover: #2a6ec6;
 
 //--
 
+//-----------------------------------
+
+
+//--|| $white Log ||-----------------
+//  *** colors.scss
+//      *   @navButtonScheme
+//          **  &:hover .fas
+//  *** body.scss
+//      **  body
+//  *** header.scss
+//      **  @bannerButton
+//      *   #search-input
+//          **@media(min-width: $scr-small)
+//      *   #search-input
+//          **  @media(min-width: $scr-small)
+//              **  &:hover
+//      **  .menu-button
+//      **  .nav-link (x2)
+//-----------------------------------
+
+
+//--|| $grey Log ||------------------
+//  *** body.scss
+//      **  body
+//-----------------------------------
+
+
+//--|| $offwhite Log ||--------------
+//  *** header.scss
+//      *   #search-input
+//          **@media(min-width: $scr-small)
+//      *   #search-input
+//          **  @media(min-width: $scr-small)
+//-----------------------------------
+
+
+//--|| $lightgrey-scheme Log ||------
+//  *** header.scss
+//      **  .contact-container
+//      *   .search-button-btn
+//          **  @media(min-width: $scr-small)
+//-----------------------------------
+
+
+//--|| $lightgrey-hover Log ||-------
+//  *** header.scss
+//      **  .contact-container
+//      *   .search-button-btn
+//          *   @media(min-width: $scr-small)
+//              * &:hover
+//-----------------------------------
+
+
+//--|| $darkgrey-scheme Log ||-------
+//  *** header.scss
+//      *   .phone-container
+//          **  .fas
+//      **  .menu-button
+//      **  .nav-container
+//-----------------------------------
+
+
+//--|| $menu-hover Log ||------------
+//  *** header.scss
+//      *   .menu-button
+//          **  &:hover
+//-----------------------------------
+
+
+//--|| $supergrey-scheme Log ||------
+
+//-----------------------------------
+
+
+//--|| $almost-black Log ||----------
+//  *** header.scss
+//      *   .phone-container
+//          **  &:hover
+//-----------------------------------
+
+
+//--|| $vl-blue Log ||---------------
+//  *** header.scss
+//      **  .support-container
+//      *   .it-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vd-blue Log ||---------------
+//  *** header.scss
+//      *   .it-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vl-purple Log ||-------------
+//  *** header.scss
+//      *   .web-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vd-purple Log ||-------------
+//  *** header.scss
+//      *   .web-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vl-red Log ||----------------
+//  *** header.scss
+//      *   .tele-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vd-red Log ||----------------
+//  *** header.scss
+//      *   .tele-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vl-grey Log ||---------------
+//  *** header.scss
+//      *   .soft-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vd-grey Log ||---------------
+//  *** header.scss
+//      *   .soft-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vl-green Log ||--------------
+//  *** header.scss
+//      *   .market-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vd-green Log ||--------------
+//  *** header.scss
+//      *   .market-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vl-pink Log ||---------------
+//  *** header.scss
+//      *   .secur-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $vd-pink Log ||---------------
+//  *** header.scss
+//      *   .secur-link
+//          **  @navButtonScheme
+//-----------------------------------
+
+
+//--|| $chathead-blue Log ||---------
+
+//-----------------------------------
+
+
+//--|| $support-hover Log ||---------
+//  *** header.scss
+//      **  .support-container
+//-----------------------------------
+
+//--|| @ navButtonScheme Log ||------
+//  ***header
+//      **  .web-link
+//      **  .it-link
+//      **  .tele-link
+//      **  .soft-link
+//      **  .market-link
+//      **  .secur-link
 //-----------------------------------
