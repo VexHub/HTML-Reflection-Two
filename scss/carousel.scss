@@ -2,25 +2,24 @@
 //==||-CAROUSEL-||==\\
 //==||----------||==\\
 
-//--> NOTES |
-// * Media queries are marked with '#(m)#'. These are proceeded by properties that change with media queries. |
-
 
 //--|| Import ||---------------------
 @import 'colors.scss';
 @import 'media.scss';
 //-----------------------------------
 
+
 //--|| Rules ||----------------------
 #carousel {
     position: relative;
 }
+
 .carousel-img-container {
 
+    overflow: hidden;
     width: 100%;
     height: 490px + 185px;
-    overflow: hidden;
-
+    
 }
 
 .carousel-img {
@@ -29,36 +28,36 @@
 
 .carousel-text {
     
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
+    top:0;
+    left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
-    top:0;
-    left: 0;
-    color: $white;
-    text-transform: uppercase;
     background-image: linear-gradient(to right, rgba(#000,1), rgba(#000,0.0));
+    color: $white; //--> from colors.scss
+    text-transform: uppercase;
+    h1 {
+        margin: 0 9.58% 25px;
+        font-size: 3rem;
+    }
     p {
 
+        margin: 0 9.58% 35px; //--> left/right, top, bottom
         font-size: 1.25rem;
         line-height: 2.25rem;
-        margin: 0 9.58% 35px;
         text-transform: none;
-        text-align: center; //--> #(m)#
-
-    }
-    h1 {
-
-        font-size: 3rem;
-        margin: 0 9.58% 25px;
-
+        
     }
     //#(m)#
     align-items: center;
-    @media (min-width: $scr-med) {
+    p {
+        text-align: center;
+    }
+    @media (min-width: $scr-med) { //--> from media.scss
 
         align-items: flex-start;
         p {
@@ -71,25 +70,25 @@
 
 .carousel-button {
 
-    color: $white;
-    background-color: $vl-purple;
-    border-color: $vl-purple;
-    line-height: 50px;
-    height: auto;
-    padding: 5px 20px;
-    font-size: 1.25rem;
-    border-radius: 3px;
-    margin-bottom: 0;
-    text-align: center;
     vertical-align: middle;
-    cursor: pointer;
     width: 183px;
+    height: auto;
+    margin-bottom: 0;
+    padding: 5px 20px;
+    background-color: $vl-purple; //--> from colors.scss
+    border-color: $vl-purple; //--> from colors.scss
+    border-radius: 3px;
+    color: $white; //--> from colors.scss
+    font-size: 1.25rem; 
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
     &:hover {
-        background-color: $vd-purple;
+        background-color: $vd-purple; //--> from colors.scss
     }
     //#(m)#
     margin-left: 0;
-    @media (min-width: $scr-med) {
+    @media (min-width: $scr-med) { //--> from media.scss
         margin-left: 9.58%;
     }
 
