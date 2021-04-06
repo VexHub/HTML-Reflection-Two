@@ -29,7 +29,8 @@
         "news.scss",
         "colors.scss",
         "media.scss",
-        "colors.scss"
+        "colors.scss",
+        "clients.scss"
     ],
     "names": [],
     "file": "style.css"
