@@ -312,6 +312,7 @@
 // Navbar
 .nav-container {
 
+    justify-content: center;
     position: relative;
     width: 100%;
     background-color: $darkgrey-scheme; //--> from colors.scss
@@ -411,6 +412,7 @@
     top: 100%;
     z-index: 2; //--> moves in front of carousel
     min-width: 100%;
+    padding-inline-start: 0;
     list-style: none;
     line-height: 2.813rem;
     cursor: pointer;

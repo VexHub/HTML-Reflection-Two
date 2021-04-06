@@ -352,6 +352,9 @@
 }
 
 .nav-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   width: 100%;
   background-color: #333645;
@@ -567,6 +570,8 @@
   top: 100%;
   z-index: 2;
   min-width: 100%;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   list-style: none;
   line-height: 2.813rem;
   cursor: pointer;
