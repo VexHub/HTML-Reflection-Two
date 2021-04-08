@@ -1,0 +1,246 @@
+#clients {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 39px;
+  padding-right: 39px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -50px 0 0 #fff;
+          box-shadow: 0px -50px 0 0 #fff;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #clients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 45.117px;
+  }
+}
+
+@media (min-width: 992px) {
+  #clients {
+    height: 62.833px;
+  }
+}
+
+@media (min-width: 1260px) {
+  #clients {
+    height: 70px;
+  }
+}
+
+.client-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.client-item:hover .pop-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.client-item:hover .client-img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+@media (min-width: 768px) {
+  .client-item:hover {
+    height: 145.117px;
+  }
+}
+
+@media (min-width: 992px) {
+  .client-item:hover {
+    height: 162.833px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .client-item {
+    margin-left: 37.5px;
+    margin-right: 37.5px;
+  }
+  .client-item:hover {
+    height: 170px;
+  }
+}
+
+.client-img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  height: auto;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .client-img.busseys-img {
+    width: 121.15px;
+  }
+  .client-img.crane-img {
+    width: 184.95px;
+  }
+  .client-img.beat-img {
+    width: 46.4px;
+  }
+  .client-img.northern-img {
+    width: 207.5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .client-img.busseys-img {
+    width: 168.75px;
+  }
+  .client-img.crane-img {
+    width: 257.6px;
+  }
+  .client-img.beat-img {
+    width: 64.633px;
+  }
+  .client-img.northern-img {
+    width: 289.017px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .client-img.busseys-img, .client-img.crane-img, .client-img.beat-img, .client-img.northern-img {
+    width: auto;
+  }
+}
+
+.pop-up {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: absolute;
+  width: 220px;
+  padding: 20px;
+  background-color: #333645;
+  color: #fff;
+  text-align: center;
+}
+
+.pop-up.pop-busseys {
+  top: -132.717px;
+}
+
+.pop-up.pop-crane {
+  top: -176.717px;
+}
+
+.pop-up.pop-beat {
+  top: -132.717px;
+}
+
+.pop-up.pop-northern {
+  top: -176.717px;
+}
+
+.pop-up::after {
+  content: "";
+  border-top: 35px solid #333645;
+  border-left: 36px solid transparent;
+  border-right: 36px solid transparent;
+  border-bottom: none;
+  position: absolute;
+  bottom: -34px;
+  width: 0;
+  height: 0;
+}
+
+@media (min-width: 768px) {
+  .pop-up.pop-busseys {
+    left: -69.425px;
+  }
+  .pop-up.pop-crane {
+    left: -37.525px;
+  }
+  .pop-up.pop-beat {
+    left: -106.8px;
+  }
+  .pop-up.pop-northern {
+    left: -26.25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pop-up.pop-busseys {
+    left: -45.625px;
+  }
+  .pop-up.pop-crane {
+    left: -1.2px;
+  }
+  .pop-up.pop-beat {
+    left: -97.6835px;
+  }
+  .pop-up.pop-northern {
+    left: 14.5085px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .pop-up.pop-busseys {
+    left: -36px;
+  }
+  .pop-up.pop-crane {
+    left: 13.5px;
+  }
+  .pop-up.pop-beat {
+    left: -94px;
+  }
+  .pop-up.pop-northern {
+    left: 31px;
+  }
+}
+
+.client-name {
+  font-weight: 400;
+  font-size: 1.125rem;
+  padding-bottom: 9px;
+  white-space: nowrap;
+}
+
+.client-line {
+  content: "";
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 11px;
+}
+
+.client-info {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=clients.css.map */
