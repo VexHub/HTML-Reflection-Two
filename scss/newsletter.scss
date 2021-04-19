@@ -11,28 +11,25 @@
 
 //--|| Rules ||----------------------
 #newsletter {
-    background-color: #ddd;
+    
     display: flex;
     justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
-    // padding-top: 30px;
-    // padding-bottom: 30px;
+    background-color: #ddd;
     
 }
 
 #newsletter-form {
-    color: $darkgrey-scheme;
+    
     display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
+    color: $darkgrey-scheme;
     //#(m)#
     width: calc(100% - 60px);
     @media (min-width: $scr-small) {
@@ -44,24 +41,27 @@
     @media (min-width: $scr-lg) {
         width: 1110px;
     }
+
 }
 
 .form-h2 {
+
+    order: -1;
+    width: 100%;
     margin-bottom: 15px;
     font-size: 2rem;
     font-weight: 400;
-    order: -1;
-    width: 100%;
     line-height: 1.1;
+
 }
 
 
 
 .form-label {
     
+    width: max-content;
     margin-bottom: 5px;
     font-weight: 600;
-    width: max-content;
     line-height: 1.42857143;
     &:first-of-type {
         margin-right: calc(50% - 92px);
@@ -75,25 +75,24 @@
         order: 0;
     }
     
-    
 }
 
 .form-text {
+
     order: 1;
-    
     height: 37px;
     margin-bottom: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    border-style: solid;
-    color: #555;
-    font-size: 0.875rem;
-    border-width: 1.6px 0 1.6px 1.6px; //--> tl,tr,br,bl
     background-color: $white; //--> from colors.scss
+    border-style: solid;
+    border-width: 1.6px 0 1.6px 1.6px; //--> tl,tr,br,bl
     border-color: $offwhite; //--> from colors.scss
     border-width: 0.8px;
+    color: #555;
+    font-size: 0.875rem;
     &:focus {
         border-color: #5bc0de;
         box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6); //--> from colors.scss
@@ -101,30 +100,36 @@
     //#(m)#
     width: 100%;
     @media (min-width: $scr-small) {
-        width: 628.4px;
+        width: 628px;
     }
     @media (min-width: $scr-med) {
-        width: 393.4px;
+
+        width: 393px;
         &:first-of-type {
             margin-right: 30px;
         }
+
     }
     @media (min-width: $scr-lg) {
-        width: 508.4px;
+        width: 508px;
     }
+
 }
 
 .check-container {
-    position: relative;
+
     order: 2;
-    margin-right: 20px;
+    position: relative;
     height: 31.533px;
+    margin-right: 20px;
+
 }
 
 .form-check {
+
+    order: 2;
     position: absolute;
     left: 0;
-    order: 2;
     width: 32px;
     height: 32px;
     margin-right: 20px;
@@ -132,56 +137,46 @@
     opacity: 0;
     cursor: pointer;
     &:checked + .form-checkset::before {
+
         content: '✓';
+        display: inline-block;
+        vertical-align: center;
         width: 32px - 5.2px;
         height: 32px - 5.2px;
         background-color: $darkgrey-scheme;
         color: $white;
         text-align: center;
-        vertical-align: center;
         font-size: 22px;
-        display: inline-block;
+        
     }
 }
-
-// .form-outercheck {
-//     position: absolute;
-//     top: 0px;
-//     left: 0;
-//     z-index: -1;
-//     order: 2;
-//     width: 32px;
-//     height: 32px;
-//     margin-right: 20px;
-//     background-color: #ddd;
-//     border-radius: 3px;
-//     border: 3px solid #000;
-// }
 
 .form-checkset {
     display: inline-block;
     width: 0;
     height: 0;
     &::before {
+
         content: '';
         display: inline-block;
-        // position: absolute;
-        margin-right: 52px;
         width: 32px - 5.2px;
         height: 32px - 5.2px;
+        margin-right: 52px;
         background-color: #ddd;
         border-radius: 3px;
         border: 3px solid $darkgrey-scheme;
+
     }
 }
 
 .form-statement {
+
     order: 2;
+    vertical-align: top;
     width: 1058px;
     margin-left: 52px;
     margin-top: -32px;
     margin-bottom: 30px;
-    vertical-align: top;
     line-height: 32px;
     font-weight: 600;
     a {
@@ -191,20 +186,22 @@
 }
 
 .form-button {
+    
     order: 3;
-    line-height: 35px;
     padding: 5px 15px;
+    background-color: $darkgrey-scheme;
+    border-radius: 3px;
+    border: none;
+    color: $white;
+    line-height: 35px;
     text-transform: uppercase;
     font-size: 1.063rem;
-    border-radius: 3px;
-    background-color: $darkgrey-scheme;
-    color: $white;
     user-select: none;
-    border: none;
     cursor: pointer;
     &:hover {
         background-color: $menu-hover;
     }
+
 }
 
 //-----------------------------------

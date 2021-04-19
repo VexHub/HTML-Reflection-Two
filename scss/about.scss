@@ -13,16 +13,24 @@
 #about-section {
 
     width: 100%;
-    height: 552px;
+    
     background-color: $darkgrey-scheme; //--> from colors.scss
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: auto 100%;
     color: $white; //--> from colors.scss
+    a{
+        text-decoration: none;
+        color: initial;
+    }
     //#(m)#
     background-image: none;
+    height: 493.2px;
     @media (min-width: $scr-med) { //--> from media.scss
         background-image: url(../resources/img/branded.png);
+    }
+    @media (min-width: $scr-lg) {
+        height: 553.6px;
     }
 
 }
@@ -35,10 +43,10 @@
     //#(m)#
     width: 100%;
     @media (min-width: $scr-small) { //--> from media.scss
-        width: 720px;
+        width: 750px;
     }
     @media (min-width: $scr-med) { //--> from media.scss
-        width: 940px;
+        width: 970px;
     }
     @media (min-width: $scr-lg) { //--> from media.scss
         width: 1200px;
@@ -50,16 +58,29 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 560px;
+    justify-content: space-between;
+    height: calc(100% - 94px);
+    
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 44px;
+    padding-bottom: 50px;
     p {
         line-height: 1.875rem;
     }
     p:first-of-type {
         font-weight: bold;
+    }
+    //#(m)#
+    width: 97%;
+    @media (min-width: $scr-small) {
+        width: 97%;
+    }
+    @media (min-width: $scr-med) {
+        width: 97%;
+    }
+    @media (min-width: $scr-lg) {
+        width: 48%;
     }
 
 }
@@ -79,6 +100,7 @@
     height: 35px;
     padding: 5px 15px;
     background-color: $white; //--> from colors.scss
+    border-radius: 3px;
     color: $darkgrey-scheme; //--> from colors.scss
     font-size: 1.063rem;
     text-transform: uppercase;

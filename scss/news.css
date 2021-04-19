@@ -19,11 +19,37 @@
 
 .break-div span {
   position: absolute;
-  top: calc(100% - 5px);
+  top: calc(100% - 10px);
   left: 0;
   width: 72px;
   height: 5px;
   background-color: #333645;
+}
+
+.break-align {
+  position: relative;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .break-align {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .break-align {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .break-align {
+    width: 1200px;
+  }
 }
 
 .news-cards {
@@ -43,6 +69,11 @@
           flex-direction: column;
 }
 
+.news-cards a {
+  text-decoration: none;
+  color: initial;
+}
+
 @media (min-width: 768px) {
   .news-cards {
     -webkit-box-orient: horizontal;
@@ -55,7 +86,7 @@
 .card-news {
   position: relative;
   margin-left: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   border: 1px solid #ccc;
   border-top-color: #fff;
   border-top-style: solid;
@@ -63,6 +94,7 @@
   border-radius: 3px;
   -webkit-box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  margin-right: 0;
 }
 
 .card-news:nth-of-type(1) .news-img-container p {
@@ -115,6 +147,7 @@
 
 @media (min-width: 768px) {
   .card-news {
+    margin-right: 15px;
     width: 345px;
     height: 568px;
   }
@@ -130,7 +163,7 @@
 @media (min-width: 1260px) {
   .card-news {
     width: 370px;
-    height: 574px;
+    height: 583.067px;
   }
 }
 
@@ -192,11 +225,15 @@
 
 .news-h3 {
   min-height: 3rem;
+  margin-top: 30px;
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 15px;
   font-size: 1rem;
-  margin-top: 30px;
+}
+
+.news-h3:hover {
+  text-decoration: underline;
 }
 
 .news-p {
@@ -239,11 +276,11 @@
       -ms-flex-align: center;
           align-items: center;
   height: 77px;
+  margin-top: 30px;
   margin-left: 30px;
   margin-right: 30px;
   padding-top: 15px;
   border-top: 1px solid #ccc;
-  margin-top: 30px;
 }
 
 .info-text {

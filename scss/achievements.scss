@@ -1,0 +1,178 @@
+//==||----------||==\\
+//==||ACHIEVEMENTS||==\\
+//==||----------||==\\
+
+
+//--|| Import ||---------------------
+@import 'colors.scss';
+@import 'media.scss';
+//-----------------------------------
+
+
+//--|| Variables ||------------------
+$ach-img-one: 220px; 
+$ach-img-two: 115px; 
+$ach-img-three: 44px; 
+$ach-img-four: 60px; 
+$ach-img-five: 175px; 
+$ach-img-six: 175px; 
+$ach-img-seven: 175px; 
+$ach-img-eight: 175px; 
+
+
+//-----------------------------------
+
+
+//--|| Mixins ||------------------
+@mixin widther($width-small, $width-med, $width-lg, $nth) {
+
+    @media (min-width: $scr-small) {
+
+        &:nth-of-type(#{$nth}) {
+            width: $width-small;
+        }
+
+    }
+    @media (min-width: $scr-med) {
+
+        &:nth-of-type(#{$nth}) {
+            width: $width-med;
+        }
+        
+    }
+    @media (min-width: $scr-lg) {
+
+        &:nth-of-type(#{$nth}) {
+            width: $width-lg;
+        }
+        
+    }
+
+}
+
+//-----------------------------------
+
+
+//--|| Rules ||----------------------
+#achievements {
+
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    //#(m)#
+    display: none;
+    height: 265.833px;
+    @media (min-width: $scr-small) {
+        display: flex;
+    }
+    @media (min-width: $scr-med) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 220.667px;
+    }
+    @media (min-width: $scr-lg) {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 265.833px;
+    }
+
+}
+
+.achievements-area {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    //#(m)#
+    // width: 1094px;
+    // height: 165.833px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    //#(m)#
+    @media (min-width: $scr-small) {
+        width: 720px;
+        height: 174.117px;
+    }
+    @media (min-width: $scr-med) {
+        width: 900px;
+        height: 220.667px;
+    }
+    @media (min-width: $scr-lg) {
+        width: 1094px;
+        height: 165.833px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+
+.ach-img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    &:nth-of-type(1) {
+        filter: grayscale(0%);
+    }
+    &:nth-of-type(1),
+    &:nth-of-type(6) {
+        padding-left: 0;
+    }
+    &:nth-of-type(5),
+    &:nth-of-type(8) {
+        padding-right: 0;
+    }
+    &:hover {
+        filter: grayscale(0%);
+    }
+    //#(m)#
+    padding-left: 55px;
+    padding-right: 55px;
+    @include widther(220px, 220px, 220px, 1);
+    @include widther(87.5667px, 140.2px, 115px, 2);
+    @include widther(33.5px, 69.2px, 44px, 3);
+    @include widther(45.6833px, 85.2px, 60px, 4);
+    @include widther(133.25px, 200.2px, 175px, 5);
+    @include widther(200px, 273.333px, 175px, 6);
+    @include widther(200px, 273.333px, 175px, 7);
+    @include widther(200px, 273.333px, 175px, 8);
+    @media (min-width: $scr-small) {
+        padding-left: 20px;
+        padding-right: 20px;
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+            padding-top: 28px;
+        }
+    }
+    @media (min-width: $scr-med) {
+
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+            padding-top: 28px;
+        }
+
+    }
+    @media (min-width: $scr-lg) {
+        padding-left: 55px;
+        padding-right: 55px;
+        &:nth-of-type(6),
+        &:nth-of-type(7) {
+            padding-right: calc(215px / 2);
+            padding-top: 26px;
+        }
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+            padding-left: calc(215px / 2);
+            padding-top: 26px;
+        }
+    }
+    
+}
+
+//-----------------------------------

@@ -12,18 +12,68 @@
 //--|| Rules ||----------------------
 #carousel {
     position: relative;
+    box-sizing: border-box;
+    a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    a:visited,
+    a:link {
+        color: $white;
+    }
+    //#(m)#
+    height: calc(100vh - 168px);
+    min-height: 531.2px;
+    @media (min-width: $scr-small) {
+        height: calc(100vh - 110px);
+        min-height: 589.2px;
+    }
+    @media (min-width: $scr-med) { //--> from media.scss
+
+        height: calc(100vh - 212.717px);
+        min-height: 490.2px;
+        a {
+            margin-left: 9.58%;
+        }
+            
+    }
 }
 
 .carousel-img-container {
 
     overflow: hidden;
+    box-sizing: border-box;
     width: 100%;
-    height: 490px + 185px;
-    
+    //#(m)#
+    height: calc(100vh - 168px);
+    min-height: 531.2px;
+    @media (min-width: $scr-small) {
+        height: calc(100vh - 110px);
+        min-height: 589.2px;
+    }
+    @media (min-width: $scr-med) {
+        height: calc(100vh - 212.717px);
+        min-height: 490.2px;
+    }
+
 }
 
 .carousel-img {
     vertical-align: middle;
+    //#(m)#
+    @media (min-height: 850px) {
+        height: 100%;
+    }
+    @media (min-width: $scr-med) {
+        @media (min-height: 950px) {
+            height: 100%;
+        }
+    }
 }
 
 .carousel-text {
@@ -88,9 +138,9 @@
     }
     //#(m)#
     margin-left: 0;
-    @media (min-width: $scr-med) { //--> from media.scss
-        margin-left: 9.58%;
-    }
+    // @media (min-width: $scr-med) { //--> from media.scss
+    //     margin-left: 9.58%;
+    // }
 
 }
 

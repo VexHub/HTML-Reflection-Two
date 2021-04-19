@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     height: 44.4px;
-    padding: 5px 15px;
+    padding: 5.8px 15.675px;
     background-color: $color-base;
     border-radius: 3px;
     color: $white; //--> from colors.scss
@@ -53,6 +53,18 @@
     justify-content: center;
     font-weight: 400;
     text-transform: uppercase;
+    a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    a:visited,
+    a:link {
+        color: $white;
+    }
 
 }
 
@@ -66,12 +78,23 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 22px;
-    padding-bottom: 23px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
     //#(m)#
     justify-content: right;
+    width: 100%;
+    height: 168px - 40px;
     @media (min-width: $scr-small) { //--> from media.scss
         justify-content: center;
+        width: 750px;
+        height: 110px - 40px;
+    }
+    @media (min-width: $scr-med) {
+        width: 940px;
+    }
+    @media (min-width: $scr-lg) {
+        width: 1170px;
     }
 
 }
@@ -80,6 +103,7 @@
 
     display: flex;
     justify-content: left;
+    align-self: flex-start;
     cursor: pointer;
     //#(m)#
     flex-basis: 200px;
@@ -87,17 +111,17 @@
     margin-left: 20px;
     @media (min-width: $scr-small) { //--> from media.scss
 
-        width: 345px;
-        height: 60.067px;
+        max-width: 345px;
+        height: 60.0667px;
         margin-left: 0;
 
     }
     @media (min-width: $scr-med) { //--> from media.scss
-        width: 374px;
+        max-width: 374px;
         height: 65.15px;
     }
     @media (min-width: $scr-lg) { //--> from media.scss
-        width: 370px;
+        max-width: 370px;
         height: 64.4167px;
     }
 
@@ -120,8 +144,8 @@
         height: 65.15px;
     }
     @media (min-width: $scr-lg) { //--> from media.scss
-        width: 374px;
-        height: 65.15px;
+        width: 370px;
+        height: 64.4167px;
     }
 
 }
@@ -157,6 +181,7 @@
 
     @include bannerButton($lightgrey-scheme, $lightgrey-hover); //--> from header.scss, from colors.scss
     margin-left: 20px;
+    padding: 5.8px 12.7915px;
 
 }
 
@@ -241,12 +266,13 @@
     cursor: pointer;
     .fas {
         color: $white;
-        font-size: 1.4375rem; 
+        font-size: 1.4375rem;
+         
     }
     // #(m)#
     height: 47px;
     margin-right: 20px;
-    padding-top: 20px;
+    padding-top: 5px;
     background-color: rgba(#000,.1);
     border: 1.6px solid rgba(#000,.1);
     border-width: 1.6px 1.6px 1.6px 0; //-->tl,tr,br,bl
@@ -342,7 +368,7 @@
         padding-bottom: 10px;
         font-size: 1.438rem;
     }
-    span {
+    a span {
 
         display: flex;
         flex-direction: column;
@@ -403,10 +429,56 @@
 
 }
 
+.right-align {
+    margin-right: auto;
+    //#(m)#
+    @media (min-width: $scr-med) {
+        &.align-one {
+            width: 102px;
+        }
+        &.align-two {
+            width: 160px;
+        }
+        &.align-three {
+            width: 77px;
+        }
+        &.align-four {
+            width: 45px;
+        }
+        &.align-five {
+            width: 206px;
+        }
+        &.align-six {
+            width: 64px;
+        }
+    }
+    @media (min-width: $scr-lg) {
+        &.align-one {
+            width: 116px;
+        }
+        &.align-two {
+            width: 184px;
+        }
+        &.align-three {
+            width: 83px;
+        }
+        &.align-four {
+            width: 42px;
+        }
+        &.align-five {
+            width: 240px;
+        }
+        &.align-six {
+            width: 66px;
+        }
+    }
+    
+}
+
 .dropdown {
 
     display: none;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     position: absolute;
     top: 100%;
@@ -419,9 +491,13 @@
     //- Dropdown menu item properties -
     li {
 
+        display: flex;
         &::after {
             content: "-"; //--> adds dash to dropdown items
             padding-left: 30px;
+        }
+        &:first-of-type {
+            margin-left: auto;
         }
         &:nth-of-type(n+2) {
             padding-left: 30px;
@@ -429,9 +505,24 @@
         &:last-of-type::after {
             content: none; //--> stops dash at end of list
         }
+    }
+    //#(m)#
+    @media (max-width: $scr-lg) {
+
+        li {
+
+            display: flex;
+            &::after {
+                content: "-"; //--> adds dash to dropdown items
+                padding-left: 20px;
+            }
+            &:nth-of-type(n+2) {
+                padding-left: 20px;
+            }
+
+        }
 
     }
-    //-/
 
 }
 
