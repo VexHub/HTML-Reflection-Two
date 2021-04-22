@@ -67,8 +67,11 @@ $clients-height-lg: 170px;
     &:hover .pop-up {
         display: flex; 
     }
-    &:hover .client-img {
-        filter: grayscale(0%);
+    &:hover .colored {
+        display: inline;
+    }
+    &:hover .grey {
+        display: none;
     }
     //#(m)#
     margin-left: 20px;
@@ -104,7 +107,6 @@ $clients-height-lg: 170px;
 
     width: auto;
     height: auto;
-    filter: grayscale(100%); //--> on .client-item hover, filter: grayscale(0%).
     //#(m)#
     @media (min-width: $scr-small) {
 
@@ -149,6 +151,10 @@ $clients-height-lg: 170px;
         
     }
     
+}
+
+.colored {
+    display: none;
 }
 
 .pop-up {
@@ -267,6 +273,7 @@ $clients-height-lg: 170px;
     margin-bottom: 0;
     font-size: .8125rem;
     line-height: 1.375rem;
+    width: 100%; //--> IE11 Fix
     
 }
 

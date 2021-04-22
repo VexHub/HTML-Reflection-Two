@@ -71,7 +71,7 @@
 
 .news-cards a {
   text-decoration: none;
-  color: initial;
+  color: #666;
 }
 
 @media (min-width: 768px) {
@@ -175,7 +175,7 @@
 
 @media (min-width: 1260px) {
   .card-news:nth-of-type(3) {
-    display: initial;
+    display: inline;
   }
 }
 

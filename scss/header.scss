@@ -113,16 +113,19 @@
 
         max-width: 345px;
         height: 60.0667px;
+        flex: 0 0 345px; //--> IE11 Fix
         margin-left: 0;
 
     }
     @media (min-width: $scr-med) { //--> from media.scss
         max-width: 374px;
         height: 65.15px;
+        flex: 0 0 374px; //--> IE11 Fix
     }
     @media (min-width: $scr-lg) { //--> from media.scss
         max-width: 370px;
         height: 64.4167px;
+        flex: 0 0 370px; //--> IE11 Fix
     }
 
 }
@@ -206,13 +209,17 @@
     @media (min-width: $scr-small) { //--> from media.scss
 
         order: 0;
-        width: initial;
+        width: 238px;
         height: 56px;
         margin-left: 55px;
 
     }
     @media (min-width: $scr-med) { //--> from media.scss
         margin-left: 20px;
+        width: 64.017px;
+    }
+    @media (min-width: $scr-lg) { //--> from media.scss
+        width: 303px;
     }
 
 }
@@ -420,7 +427,7 @@
     position: absolute;
     left: 0;
     width: 99vw;
-    margin-top: 99px;
+    top: 102px;
     //#(m)#
     font-size: .8125rem;
     @media (min-width: $scr-lg) { //--> from media.scss
@@ -485,6 +492,7 @@
     z-index: 2; //--> moves in front of carousel
     min-width: 100%;
     padding-inline-start: 0;
+    padding-left: 0; //--> IE11 Fix
     list-style: none;
     line-height: 2.813rem;
     cursor: pointer;

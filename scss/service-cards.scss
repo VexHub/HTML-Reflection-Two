@@ -27,15 +27,15 @@
     margin-top: 30px;
     margin-left: 15px;
     margin-right: 15px;
-    padding-left: 30px;
-    padding-right: 30px ;
+    // padding-left: 30px;
+    // padding-right: 30px ;
     background-color: $white; //--> from colors.scss
     border: 1px solid $offwhite; //--> from colors.scss
     border-radius: 3px;
     box-shadow: 0 3px 35px rgba(#000,0.1);
     text-align: center;
     text-decoration: none;
-    color: initial;
+    color: $grey;
     cursor: pointer;
     
     }
@@ -46,45 +46,44 @@
         width: 1200px;
         margin-left: auto;
         margin-right: auto;
-        .top-row {
-            flex: 0 0 308px;
+        .top-con {
+            flex: 0 0 368px;
         }
-        .bottom-row {
-            flex: 0 0 208px;
+        .bottom-con {
+            flex: 0 0 268px;
         }
     }
     @media (min-width: $scr-med) and (max-width: $scr-lg) { //--> from media.scss
         
-        a,
-        .card {
+        a {
             margin-left: 15px;
             margin-right: 15px;
         }
-        .top-row {
-            flex: 0 0 231px;
+        .top-con {
+            flex: 0 0 293px;
         }
-        .bottom-row {
-            flex: 0 0 393px;
+        .bottom-con {
+            flex: 0 0 455px;
         }
         
     }
     @media (min-width: $scr-small) and (max-width: $scr-med) { //--> from media.scss
         
-        .top-row {
-            flex: 0 0 658px;
+        .top-con {
+            flex: 0 0 720px;
         }
-        .bottom-row {
-            flex: 0 0 283px;
+        .bottom-con {
+            flex: 0 0 345px;
         }
 
     }
-    @media (max-width: $scr-small) { //--> from media.scss
+    // @media (max-width: $scr-small) { //--> from media.scss
        
-        .card {
-            flex: 0 0 100%;
-        }
+    //     .card {
+    //         // flex: 0 0 100%;
+    //     }
 
-    }
+    // }
 
 }
 
@@ -96,33 +95,32 @@
     align-items: center;
     height: min-content;
     // margin-top: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 30px;
+    // margin-left: 15px;
+    // margin-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: $white; //--> from colors.scss
-    border: 1px solid $offwhite; //--> from colors.scss
-    border-radius: 3px;
-    box-shadow: 0 3px 35px rgba(#000,0.1);
+    // border: 1px solid $offwhite; //--> from colors.scss
+    // border-radius: 3px;
+    // box-shadow: 0 3px 35px rgba(#000,0.1);
     text-align: center;
     cursor: pointer;
+    width: 100%;
     h2 {
         color: $darkgrey-scheme; //--> from colors.scss
         font-size: 1.125rem; 
+        font-weight: 400;
+        margin-bottom: 14px;
     }
     span {
 
         width: 28px;
-        height: 3px;
+        min-height: 3px;
         background-color: $darkgrey-scheme; //--> from colors.scss
+        margin-bottom: 11px;
 
     }
-    p {
-
-        margin-bottom: 13px;
-        font-size: .8125rem;
-        line-height: 1.375rem;
-        
-    }
+    
     &:hover .card-icon,
     &:hover span,
     &:hover .card-button {
@@ -165,6 +163,34 @@
 
     }
     
+}
+
+.top-con .card-p {
+    //#(m)#
+    width: 75%;
+    @media (min-width: $scr-small) {
+        width: 658px;
+    }
+    @media (min-width: $scr-med) {
+        width: 232px;
+    }
+    @media (min-width: $scr-lg) {
+        width: 308px;
+    }
+}
+
+.bottom-con .card-p {
+    //#(m)#
+    width: 75%;
+    @media (min-width: $scr-small) {
+        width: 345px;
+    }
+    @media (min-width: $scr-med) {
+        width: 455px;
+    }
+    @media (min-width: $scr-lg) {
+        width: 208px;
+    }
 }
 
 .soft-card {
@@ -300,12 +326,25 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 60px;
+    // align-items: center;
+    min-height: 60px;
     width: 60px;
     border-radius: 50%;
     color: $white; //--> from colors.scss
     font-size: 1.438rem;
+    margin-bottom: 17px;
+    .fas {
+        height: 24px;
+        margin-top: 19px;
+    }
+    
+}
+
+.card-p {
+
+    margin-bottom: 13px;
+    font-size: .8125rem;
+    line-height: 1.375rem;
     
 }
 
