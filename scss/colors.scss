@@ -90,44 +90,91 @@ $support-hover: #2a6ec6;
 //--|| $white Log ||-----------------
 //  *** colors.scss
 //      *   @navButtonScheme
-//          **  &:hover .fas
+//          **  &:hover .fas (#73)
 //  *** body.scss
-//      **  body
+//      **  body (#30)
 //  *** header.scss
-//      **  @bannerButton
+//      **  @bannerButtons (#22)
+//      *   .header-container
+//          **  a:visited, a:link (#68)
 //      *   #search-input
-//          **@media(min-width: $scr-small)
-//      *   #search-input
-//          **  @media(min-width: $scr-small)
-//              **  &:hover
-//      **  .menu-button
-//      **  .nav-link (x2)
+//          **  @media (min-width: $scr-small) (#258)
+//              **  &:focus (#263)
+//      *   .search-bar-btn
+//          **  .fas (#282)
+//      **  .menu-button (#333)
+//      **  .nav-link (#376)
 //  *** carousel.scss
-//      **  .carousel-text
-//      **  .carousel-button
-//  *** services-cards.scss
-//      **  .card
-//      **  .card-icon
-//      **  .card-button
+//      **  .carousel-text (#97)
+//      **  .carousel-button (#138)
+//  *** service-cards.scss
+//      *   #service-cards
+//          **  a (#31)
+//      **  .card (#90)
+//          **  &:hover .card-icon, &:hover span, &:hover .card-button (#112)
+//          **  &:hover h2 (#115)
+//      *   .soft-card
+//          **  .card-icon, .card-button (#190)
+//      **  .soft-card:hover (#198)
+//      *   .it-card
+//          **  .card-icon, .card-button (#211)
+//      **  .it-card:hover (#219)
+//      *   .market-card
+//          **  .card-icon, .card-button (#232)
+//      **  .market-card:hover (#240)
+//      *   .tele-card
+//          **  .card-icon, .card-button (#253)
+//      **  .tele-card:hover (#261)
+//      *   .web-card, .scs-card
+//          **  .card-icon, .card-button (#275)
+//      **  .web-card:hover, .scs-card:hover (#287)
+//      *   .secur-card
+//          **  .card-icon, .card-button (#297)
+//      **  .secur-card:hover (#305)
+//      **  .card-icon (#321)
+//      **  .card-button (#342)
 //  *** about.scss
-//      **  #about-section
-//      **  .about-button
+//      **  #about-section (#21)
+//      **  .about-button (#101)
+//  *** news.scss
+//      **  .break-div (#18)
+//      **  .news-cards (#74)
+//      **  .card-news (#93)
+//      *   .news-img-container
+//          **  p (#197)
+//  *** clients.scss
+//      **  #clients (#44, #45)
+//      **  .pop-up (#172)
+//  *** newsletter.scss
+//      **  .form-text (#88)
+//      **  .form-button (#197)
+//  *** footer.scss
+//      **  footer (#19)
+//      **  footer a (#25)
 //-----------------------------------
 
 
 //--|| $grey Log ||------------------
 //  *** body.scss
-//      **  body
+//      **  body (#31)
+//  *** service-cards.scss
+//      *   #service-cards
+//          ** a (#35)
+//  *** news.scss
+//      *  .news-cards
+//          **  a (#77)
 //-----------------------------------
 
 
 //--|| $offwhite Log ||--------------
 //  *** header.scss
 //      *   #search-input
-//          **@media(min-width: $scr-small)
+//          **@media(min-width: $scr-small) (#259)
 //      *   #search-input
 //          **  @media(min-width: $scr-small)
 //  *** services-cards.scss
+//      *   #service-cards
+//          **  a (#32)
 //      **  .card
 //          **  &:hover
 //              **  h2
@@ -149,46 +196,75 @@ $support-hover: #2a6ec6;
 //      *   .secur-card
 //          **  .card-icon, .card-button
 //          **  &:hover
+//  *** news.scss
+//      **  .card-news (#92)
+//      **  .post-info (#276)
+//  *** newsletter.scss
+//      **  .form-text (#91)
+//          **  &:focus (#97)
+//      *   .form-check
+//          **  &:checked + .form-checkset::before (#146)
 //-----------------------------------
 
 
 //--|| $lightgrey-scheme Log ||------
 //  *** header.scss
-//      **  .contact-container
+//      **  .contact-container (#192)
 //      *   .search-button-btn
-//          **  @media(min-width: $scr-small)
+//          **  @media(min-width: $scr-small) (#301)
 //-----------------------------------
 
 
 //--|| $lightgrey-hover Log ||-------
 //  *** header.scss
-//      **  .contact-container
+//      **  .contact-container (#192)
 //      *   .search-button-btn
 //          *   @media(min-width: $scr-small)
-//              * &:hover
+//              **  &:hover (#304)
 //-----------------------------------
 
 
 //--|| $darkgrey-scheme Log ||-------
 //  *** header.scss
 //      *   .phone-container
-//          **  .fas
-//      **  .menu-button
+//          **  .fas (#168)
+//      **  .menu-button (#330)
 //      **  .nav-container
 //  *** services-cards.scss
 //      *   .card
-//          **  h2
-//          **  span
+//          **  h2 (#96)
+//          **  span (#106)
 //  *** about.scss
-//      **  #about-section
-//      **  .about-button
+//      **  #about-section (#17)
+//      **  .about-button (#103)
+//  *** news.scss
+//      **  .break-div (#20)
+//          **  span (#36)
+//  *** clients.scss
+//      **  .pop-up (#171)
+//          **  &::ater (#193)
+//      **  .client-line (#267)
+//  *** newsletter.scss
+//      **  #newsletter-form (#33)
+//      *   .form-check
+//          **  &:checked + .form-checkset::before (#145)
+//      *   .form-checkset
+//          **  &:before (#168)
+//      *   .form-statement
+//          **  a (#185)
+//      **  .form-button (#194)
+//  *** footer.scss
+//      **  footer (#18)
 //-----------------------------------
 
 
 //--|| $menu-hover Log ||------------
 //  *** header.scss
 //      *   .menu-button
-//          **  &:hover
+//          **  &:hover (#342)
+//  *** newsletter.scss
+//      *   .form-button
+//          **  &:hover (#204)
 //-----------------------------------
 
 
@@ -200,118 +276,155 @@ $support-hover: #2a6ec6;
 //--|| $almost-black Log ||----------
 //  *** header.scss
 //      *   .phone-container
-//          **  &:hover
+//          **  &:hover (#172)
 //-----------------------------------
 
 
 //--|| $vl-blue Log ||---------------
 //  *** header.scss
-//      **  .support-container
+//      **  .support-container (#185)
 //      *   .it-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#413)
+//  *** service-cards.scss
 //      *   .it-card
-//          **  .card-icon, .card-button
-//          **  &:hover
-//              **  .card-icon, .card-button
+//          **  .card-icon, .card-button (#210)
+//      **  .it-card:hover (#218)
+//          **  .card-icon, .card-button (#222)
 //-----------------------------------
 
 
 //--|| $vd-blue Log ||---------------
 //  *** header.scss
 //      *   .it-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#413)
 //-----------------------------------
 
 
 //--|| $vl-purple Log ||-------------
 //  *** header.scss
 //      *   .web-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#409)
 //  *** carousel.scss
-//      **  .carousel-button (x2)
+//      **  .carousel-button (#135, #136)
+//  *** service-cards.scss
 //      *   .web-card, .scs-card
-//          **  .card-icon, .card-button
-//          **  &:hover
-//              **  .card-icon, .card-button
+//          **  .card-icon, .card-link (#274)
+//      **  .web-card:hover, scs-card:hover (#284)
+//          **  .card-icon, .card-link (#287)
+//  *** news.scss
+//      *   .card-news
+//          *   &:nth-of-type(1)
+//              **  .news-image-container p (#101)
+//              **  h3 (#104)
+//              **  .news-button (#107)
+//          *   &:nth-of-type(3)
+//              **  .news-image-container p (#133)
+//              **  h3 (#136)
+//              **  .news-button (#139)
 //-----------------------------------
 
 
 //--|| $vd-purple Log ||-------------
 //  *** header.scss
 //      *   .web-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#409)
 //  *** carousel.scss
 //      *   .carousel-button
-//          **  &:hover
+//          **  &:hover (#144)
+//  *** news.scss
+//      *   .card-news
+//          *   &:nth-of-type(1)
+//              **  .news-button:hover (#110)
+//          *   &:nth-of-type(3)
+//              **  .news-button:hover (#142)
 //-----------------------------------
 
 
 //--|| $vl-red Log ||----------------
 //  *** header.scss
 //      *   .tele-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#417)
+//  *** service-cards.scss
 //      *   .tele-card
-//          **  .card-icon, .card-button
-//          **  &:hover
-//              **  .card-icon, .card-button
+//          **  .card-icon, .card-link (#252)
+//      **  .tele-card:hover (#260)
+//          **  .card-icon, .card-link (#264)
+//  *** news.scss
+//      *   .card-news
+//          *   &:nth-of-type(2)
+//              **  .news-image-container p (#117)
+//              **  h3 (#120s)
+//              **  .news-button (#123)
+//      *   .news-img-container
+//          **  p (#197)
 //-----------------------------------
 
 
 //--|| $vd-red Log ||----------------
 //  *** header.scss
 //      *   .tele-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#417)
+//  *** news.scss
+//      *   .card-news
+//          *   &:nth-of-type(2)
+//              **  .news-button:hover (#126)
 //-----------------------------------
 
 
 //--|| $vl-grey Log ||---------------
 //  *** header.scss
 //      *   .soft-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#421)
 //  *** services-cards.scss
 //      *   .soft-card
-//          **  .card-icon, .card-button
-//          **  &:hover
-//              **  .card-icon, .card-button
+//          **  .card-icon, .card-button (#189)
+//      **  .soft-card:hover (#197)
+//              **  .card-icon, .card-button (#201)
 //-----------------------------------
 
 
 //--|| $vd-grey Log ||---------------
 //  *** header.scss
 //      *   .soft-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#421)
 //-----------------------------------
 
 
 //--|| $vl-green Log ||--------------
 //  *** header.scss
 //      *   .market-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#425)
+//  *** service-cards.scss
 //      *   .market-card
-//          **  .card-icon, .card-button
-//          **  &:hover
-//              **  .card-icon, .card-button
+//          **  .card-icon, .card-link (#231)
+//      **  .market-card:hover (#239)
+//          **  .card-icon, .card-link (#243)
 //-----------------------------------
 
 
 //--|| $vd-green Log ||--------------
 //  *** header.scss
 //      *   .market-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#425)
 //-----------------------------------
 
 
 //--|| $vl-pink Log ||---------------
 //  *** header.scss
 //      *   .secur-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#429)
+//  *** service-cards.scss
+//      *   .secur-card
+//          **  .card-icon, .card-button (#296)
+//      **  .secur-card:hover (#304)
+//          **  .card-icon, .card-button (#308)
 //-----------------------------------
 
 
 //--|| $vd-pink Log ||---------------
 //  *** header.scss
 //      *   .secur-link
-//          **  @navButtonScheme
+//          **  @navButtonScheme (#429)
 //      *   .secur-card
 //          **  .card-icon, .card-button
 //          **  &:hover
@@ -326,7 +439,7 @@ $support-hover: #2a6ec6;
 
 //--|| $support-hover Log ||---------
 //  *** header.scss
-//      **  .support-container
+//      **  .support-container (#185)
 //-----------------------------------
 
 //--|| @ navButtonScheme Log ||------

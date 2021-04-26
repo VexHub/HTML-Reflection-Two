@@ -9,58 +9,13 @@
 //-----------------------------------
 
 
-//--|| Variables ||------------------
-$ach-img-one: 220px; 
-$ach-img-two: 115px; 
-$ach-img-three: 44px; 
-$ach-img-four: 60px; 
-$ach-img-five: 175px; 
-$ach-img-six: 175px; 
-$ach-img-seven: 175px; 
-$ach-img-eight: 175px; 
-
-
-//-----------------------------------
-
-
-//--|| Mixins ||------------------
-@mixin widther($width-small, $width-med, $width-lg, $nth) {
-
-    @media (min-width: $scr-small) {
-
-        &:nth-of-type(#{$nth}) {
-            width: $width-small;
-        }
-
-    }
-    @media (min-width: $scr-med) {
-
-        &:nth-of-type(#{$nth}) {
-            width: $width-med;
-        }
-        
-    }
-    @media (min-width: $scr-lg) {
-
-        &:nth-of-type(#{$nth}) {
-            width: $width-lg;
-        }
-        
-    }
-
-}
-
-//-----------------------------------
-
-
 //--|| Rules ||----------------------
+
 #achievements {
 
-    
     justify-content: center;
     align-items: center;
     width: 100%;
-    
     //#(m)#
     display: none;
     height: 265.833px;
@@ -87,9 +42,6 @@ $ach-img-eight: 175px;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-    //#(m)#
-    // width: 1094px;
-    // height: 165.833px;
     padding-top: 0px;
     padding-bottom: 0px;
     //#(m)#
@@ -111,18 +63,10 @@ $ach-img-eight: 175px;
 }
 
 .ach-div {
-    // @include widther(220px, 220px, 220px, 1);
-    // @include widther(87.5667px, 140.2px, 115px, 2);
-    // @include widther(33.5px, 69.2px, 44px, 1);
-    // @include widther(45.6833px, 85.2px, 60px, 2);
-    // @include widther(133.25px, 200.2px, 175px, 3);
-    // @include widther(200px, 273.333px, 175px, 4);
-    // @include widther(200px, 273.333px, 175px, 5);
-    // @include widther(200px, 273.333px, 175px, 6);
+
     display: flex;
-    // justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
     &:hover .colored {
         display: inline;
@@ -133,11 +77,13 @@ $ach-img-eight: 175px;
     //#(m)#
     height: 87.1967px;
     &:nth-of-type(1n+4) {
-        height: 58px;
-        margin-top: 20px;
+
         width: 390px;
+        height: 58px;
+        margin-top: 20px;  
         padding-left: 20px;
         padding-right: 20px;
+
     }
     &:nth-of-type(1) {
         width: 115.2px + 40px;
@@ -149,11 +95,12 @@ $ach-img-eight: 175px;
         width: 246.2px + 40px;
     }
     @media (min-width: $scr-small) {
+
         height: 87.1967px;
         &:nth-of-type(1n+4) {
+            width: 240px;
             height: 66.2833px;
             margin-top: 20px;
-            width: 240px;
             padding-left: 20px;
             padding-right: 20px;
             img {
@@ -170,19 +117,23 @@ $ach-img-eight: 175px;
         &:nth-of-type(3) {
             width: 133.25px + 40px;
         }
+
     }
     @media (min-width: $scr-med) {
+
         height: 110px;
         &:nth-of-type(1n+4) {
+
+            width: 313.333px;
             height: 90.5833px;
             margin-top: 20px;
-            width: 313.333px;
             padding-left: 20px;
             padding-right: 20px;
             img {
                 padding-left: 0px;
                 padding-right: 0px;
             }
+
         }
         &:nth-of-type(1) {
             width: 69.2px + 40px;
@@ -193,19 +144,23 @@ $ach-img-eight: 175px;
         &:nth-of-type(3) {
             width: 200.2px + 40px;
         }
+
     }
     @media (min-width: $scr-lg) {
+
         height: 87.1967px;
         &:nth-of-type(1n+4) {
+
+            width: 390px;
             height: 58px;
             margin-top: 20px;
-            width: 390px;
             padding-left: 0px;
             padding-right: 0px;
             img {
                 padding-left: 20px;
                 padding-right: 20px;
             }
+
         }
         &:nth-of-type(1) {
             width: 115.2px + 40px;
@@ -217,73 +172,28 @@ $ach-img-eight: 175px;
             width: 246.2px + 40px;
         }
     }
+
 }
 
 .ach-img {
-    box-sizing: border-box;
+
     flex-grow: 0;
-    
     flex-shrink: 0;
+    box-sizing: border-box;
     height: auto;
     min-height: auto;
     object-fit: contain;
-    
-    // &:nth-of-type(1),
-    // &:nth-of-type(2) {
-        
-    // }
     //#(m)#
     padding-left: 20px;
     padding-right: 20px;
     @media (max-width: $scr-lg) {
         width: 100%;
     }
-    // @include widther(220px, 220px, 220px, 1);
-    // @include widther(87.5667px, 140.2px, 115px, 2);
-    // @include widther(33.5px, 69.2px, 44px, 3);
-    // @include widther(45.6833px, 85.2px, 60px, 4);
-    // @include widther(133.25px, 200.2px, 175px, 5);
-    // @include widther(200px, 273.333px, 175px, 6);
-    // @include widther(200px, 273.333px, 175px, 7);
-    // @include widther(200px, 273.333px, 175px, 8);
-    // @media (min-width: $scr-small) {
-    //     padding-left: 20px;
-    //     padding-right: 20px;
-    //     &:nth-of-type(6),
-    //     &:nth-of-type(7),
-    //     &:nth-of-type(8) {
-    //         padding-top: 28px;
-    //     }
-    // }
-    // @media (min-width: $scr-med) {
 
-    //     &:nth-of-type(6),
-    //     &:nth-of-type(7),
-    //     &:nth-of-type(8) {
-    //         padding-top: 28px;
-    //     }
-
-    // }
-    // @media (min-width: $scr-lg) {
-    //     padding-left: 55px;
-    //     padding-right: 55px;
-    //     &:nth-of-type(6),
-    //     &:nth-of-type(7) {
-    //         padding-right: calc(215px / 2);
-    //         padding-top: 26px;
-    //     }
-    //     &:nth-of-type(7),
-    //     &:nth-of-type(8) {
-    //         padding-left: calc(215px / 2);
-    //         padding-top: 26px;
-    //     }
-    // }
-    
 }
 
 .non-div {
-    // padding-right: 55px;
-    // padding-left: 55px;
+
     //#(m)#
     &:nth-of-type(1) {
         width: 291.2px + 40px;
@@ -292,17 +202,23 @@ $ach-img-eight: 175px;
         width: 225px;
     }
     @media (min-width: $scr-small) {
+
         &:nth-of-type(1) {
+
             width: 220.2px + 40px;
             margin-left: 0px;
             margin-right: 0px;
+
         }   
         &:nth-of-type(2) {
             width: 127.567px;
         }
+
     }
     @media (min-width: $scr-med) {
+
         &:nth-of-type(1) {
+
             width: 220.2px + 40px;
             margin-left: 12.5px;
             margin-right: 12.5px;
@@ -310,8 +226,10 @@ $ach-img-eight: 175px;
         &:nth-of-type(2) {
             width: 180.2px;
         }
+
     }
     @media (min-width: $scr-lg) {
+
         padding-right: 55px;
         padding-left: 55px;
         &:nth-of-type(1) {
@@ -322,7 +240,9 @@ $ach-img-eight: 175px;
         &:nth-of-type(2) {
             width: 225px;
         }
+
     }
+
 }
 
 .colored {

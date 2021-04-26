@@ -15,31 +15,57 @@ $scr-lg: 1260px;
 
 //--|| #(m)# Log ||--------------------
 //  *** header.scss
-//      **  .banner-container
-//      **  .logo-container (x3)
-//      **  .logo-img (x3)
-//      **  .phone-container
-//      **  .contact-container, .support-container
-//      **  .search-container (x2)
-//      **  .search-input (x3)
-//      **  .search-button-btn
-//      **  .menu-container
-//      **  .nav-container
-//      **  .nav-link
-//      **  .dropdown-container
+//      **  .banner-container (#85-101)
+//      **  .logo-container (#111-136)
+//      **  .logo-img (#142-159)
+//      **  .phone-container (#176-179)
+//      **  .contact-container, .support-container (#201-205)
+//      **  .search-container (#211-230)
+//      **  .search-input (#246-273)
+//      **  .search-button-btn (#286-307)
+//      **  .menu-container (#313-317)
+//      **  .nav-container (#359-363)
+//      **  .nav-link (#399-403)
+//      **  .dropdown-container (#438-442)
+//      **  .right-align (#449-493)
+//      **  .dropdown (#530-546)
 //  *** carousel.scss
-//      **  .carousel-text
-//          **  p
-//      **  .carousel-button
+//      **  #carousel (#32-47)
+//      **  .carousel-img-container (#56-66)
+//      **  .carousel-img (#73-81)
+//      **  .carousel-text (#111-123)
 //  *** services-cards.scss
-//      *   #services-cards
-//          **  .card (x2)
-//          **  .top-row (x3)
-//          **  .bottom-row (x3)
-//      **  .card (x2)
-//          **  &.soft-card, &.market-card
-//          **  &.bottom-row (x3)
+//      **   #services-cards (#41-76)
+//      **  .card (#117-149)
+//      **  .top-con .card-p (#155-165)
+//      **  .bottom-con .card-p (#171-181)
 //  *** about.scss
-//      **  #about-section
-//      **  .about-area (x3)
+//      **  #about-section (#26-34)
+//      **  .about-area (#43-53)
+//      **  .about-text (#73-83)
+//  *** news.scss
+//      **  .break-align (#48-58)
+//      **  .news-cards (#79-83)
+//      **  .card-news (#146-162)
+//      **  .news-img-container (#205-218)
+//      **  .news-p (#241-248)
+//  *** clients.scss
+//      **  #clients (#47-58)
+//      **  .client-item (#77-102)
+//      **  .client-img (#111-153)
+//      **  .pop-up (#199-247)
+//  *** newsletter.scss
+//      **  #newsletter-form (#34-44)
+//      **  .form-label (#71-75)
+//      **  .form-text (#99-114)
+//  *** footer.scss
+//      **  #footer-container (#42-54)
+//      **  .footer-col (#60-95)
+//      **  .fab-item (#155-165)
+//  *** achievements.scss
+//      **  #achievements (#19-35)
+//      **  .achievements-area (#47-61)
+//      **  .ach-div (#77-174)
+//      **  .ach-img (#186-191)
+//      **  .non-div (#197-244)
 //-----------------------------------

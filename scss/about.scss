@@ -10,15 +10,15 @@
 
 
 //--|| Rules ||---------------------
+
 #about-section {
 
     width: 100%;
-    
-    background-color: $darkgrey-scheme; //--> from colors.scss
+    background-color: $darkgrey-scheme; //--> var, color.scss
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: auto 100%;
-    color: $white; //--> from colors.scss
+    color: $white; //--> var, color.scss
     a{
         text-decoration: none;
         color: initial;
@@ -26,7 +26,7 @@
     //#(m)#
     background-image: none;
     height: 493.2px;
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
         background-image: url(../resources/img/branded.png);
     }
     @media (min-width: $scr-lg) {
@@ -42,13 +42,13 @@
     margin-right: auto;
     //#(m)#
     width: 100%;
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
         width: 750px;
     }
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
         width: 970px;
     }
-    @media (min-width: $scr-lg) { //--> from media.scss
+    @media (min-width: $scr-lg) {
         width: 1200px;
     }
 
@@ -60,7 +60,6 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(100% - 94px);
-    
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 44px;
@@ -99,9 +98,9 @@
     width: 141px;
     height: 35px;
     padding: 5px 15px;
-    background-color: $white; //--> from colors.scss
+    background-color: $white; //--> var, color.scss
     border-radius: 3px;
-    color: $darkgrey-scheme; //--> from colors.scss
+    color: $darkgrey-scheme; //--> var, color.scss
     font-size: 1.063rem;
     text-transform: uppercase;
     cursor: pointer;

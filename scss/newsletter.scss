@@ -10,6 +10,7 @@
 
 
 //--|| Rules ||----------------------
+
 #newsletter {
     
     display: flex;
@@ -23,13 +24,13 @@
 #newsletter-form {
     
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
-    color: $darkgrey-scheme;
+    color: $darkgrey-scheme; //--> var, color.scss
     //#(m)#
     width: calc(100% - 60px);
     @media (min-width: $scr-small) {
@@ -54,8 +55,6 @@
     line-height: 1.1;
 
 }
-
-
 
 .form-label {
     
@@ -86,16 +85,16 @@
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: $white; //--> from colors.scss
+    background-color: $white;  //--> var, color.scss
     border-style: solid;
     border-width: 1.6px 0 1.6px 1.6px; //--> tl,tr,br,bl
-    border-color: $offwhite; //--> from colors.scss
+    border-color: $offwhite;  //--> var, color.scss
     border-width: 0.8px;
     color: #555;
     font-size: 0.875rem;
     &:focus {
         border-color: #5bc0de;
-        box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6); //--> from colors.scss
+        box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6); //--> var, color.scss
     }
     //#(m)#
     width: 100%;
@@ -143,15 +142,17 @@
         vertical-align: center;
         width: 32px - 5.2px;
         height: 32px - 5.2px;
-        background-color: $darkgrey-scheme;
-        color: $white;
+        background-color: $darkgrey-scheme; //--> var, color.scss
+        color: $white; //--> var, color.scss
         text-align: center;
         font-size: 22px;
         
     }
+
 }
 
 .form-checkset {
+
     display: inline-block;
     width: 0;
     height: 0;
@@ -164,9 +165,10 @@
         margin-right: 52px;
         background-color: #ddd;
         border-radius: 3px;
-        border: 3px solid $darkgrey-scheme;
+        border: 3px solid $darkgrey-scheme; //--> var, color.scss
 
     }
+    
 }
 
 .form-statement {
@@ -180,7 +182,7 @@
     line-height: 32px;
     font-weight: 600;
     a {
-        color: $darkgrey-scheme;
+        color: $darkgrey-scheme; //--> var, color.scss
     }
     
 }
@@ -189,17 +191,17 @@
     
     order: 3;
     padding: 5px 15px;
-    background-color: $darkgrey-scheme;
+    background-color: $darkgrey-scheme; //--> var, color.scss
     border-radius: 3px;
     border: none;
-    color: $white;
+    color: $white; //--> var, color.scss
     line-height: 35px;
     text-transform: uppercase;
     font-size: 1.063rem;
     user-select: none;
     cursor: pointer;
     &:hover {
-        background-color: $menu-hover;
+        background-color: $menu-hover; //--> var, color.scss
     }
 
 }

@@ -19,7 +19,7 @@
     padding: 5.8px 15.675px;
     background-color: $color-base;
     border-radius: 3px;
-    color: $white; //--> from colors.scss
+    color: $white; //--> var, color.scss
     font-size: 1.125rem;
     line-height: 46px;
     cursor: pointer; 
@@ -54,16 +54,18 @@
     font-weight: 400;
     text-transform: uppercase;
     a {
-        text-decoration: none;
+        
         display: flex;
         flex-direction: column;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        text-decoration: none;
+
     }
     a:visited,
     a:link {
-        color: $white;
+        color: $white; //--> var, color.scss
     }
 
 }
@@ -80,15 +82,16 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    
     //#(m)#
     justify-content: right;
     width: 100%;
     height: 168px - 40px;
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
+
         justify-content: center;
         width: 750px;
         height: 110px - 40px;
+
     }
     @media (min-width: $scr-med) {
         width: 940px;
@@ -109,23 +112,27 @@
     flex-basis: 200px;
     flex-grow: 1;
     margin-left: 20px;
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
 
+        flex: 0 0 345px; //--> IE11 Fix
         max-width: 345px;
         height: 60.0667px;
-        flex: 0 0 345px; //--> IE11 Fix
         margin-left: 0;
 
     }
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
+
+        flex: 0 0 374px; //--> IE11 Fix
         max-width: 374px;
         height: 65.15px;
-        flex: 0 0 374px; //--> IE11 Fix
+        
     }
-    @media (min-width: $scr-lg) { //--> from media.scss
+    @media (min-width: $scr-lg) {
+
+        flex: 0 0 370px; //--> IE11 Fix
         max-width: 370px;
         height: 64.4167px;
-        flex: 0 0 370px; //--> IE11 Fix
+        
     }
 
 }
@@ -134,19 +141,19 @@
 
     //#(m)#
     width: 100%;
-    @media (min-width: $scr-tiny) { //--> from media.scss
+    @media (min-width: $scr-tiny) {
         width: 402px;
         height: 70px;
     }
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
         width: 345px;
         height: 60.067px;
     }
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
         width: 374px;
         height: 65.15px;
     }
-    @media (min-width: $scr-lg) { //--> from media.scss
+    @media (min-width: $scr-lg) {
         width: 370px;
         height: 64.4167px;
     }
@@ -158,16 +165,16 @@
     .fas { //--> phone icon
 
         margin-left: 15px;
-        color: $darkgrey-scheme; //--> from colors.scss
+        color: $darkgrey-scheme; //--> var, color.scss
         font-size: 2rem;
         cursor: pointer;
         &:hover {
-            color: $almost-black; //--> from colors.scss
+            color: $almost-black;  //--> var, color.scss
         }
 
     }
     //#(m)#
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
         display: none;
     }
 
@@ -175,14 +182,14 @@
 
 .support-container {
 
-    @include bannerButton($vl-blue, $support-hover); //--> from header.scss, from colors.scss
+    @include bannerButton($vl-blue, $support-hover);  //--> var, color.scss (x2)
     margin-left: 93px;
 
 }
 
 .contact-container {
 
-    @include bannerButton($lightgrey-scheme, $lightgrey-hover); //--> from header.scss, from colors.scss
+    @include bannerButton($lightgrey-scheme, $lightgrey-hover); //--> var, color.scss (x2)
     margin-left: 20px;
     padding: 5.8px 12.7915px;
 
@@ -193,7 +200,7 @@
 
     //#(m)#
     display: none;
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
         display: flex;
     }
 
@@ -206,7 +213,7 @@
     width: 100%;
     height: 47px;
     margin-left: 20px;
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) { 
 
         order: 0;
         width: 238px;
@@ -214,11 +221,11 @@
         margin-left: 55px;
 
     }
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
         margin-left: 20px;
         width: 64.017px;
     }
-    @media (min-width: $scr-lg) { //--> from media.scss
+    @media (min-width: $scr-lg) {
         width: 303px;
     }
 
@@ -244,23 +251,23 @@
     &:focus {
         box-shadow: none;
     }
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
 
         width: 142px;
         height: 44.4px;
-        background-color: $white; //--> from colors.scss
-        border-color: $offwhite; //--> from colors.scss
+        background-color: $white;  //--> var, color.scss
+        border-color: $offwhite;  //--> var, color.scss
         border-width: 0.8px;
         &:focus {
             border-color: #5bc0de;
-            box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6); //--> from colors.scss
+            box-shadow: inset 0 1px 1px rgba($white, 0.075), 0 0 8px rgba(#5bc0de,0.6);  //--> var, color.scss
         }
 
     }
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
         display: none;
     }
-    @media (min-width: $scr-lg) { //--> from media.scss
+    @media (min-width: $scr-lg) {
         display: inline-block;
         width: 208px;
     }
@@ -272,7 +279,7 @@
     border-radius: 0 3px 3px 0; //--> tl,tr,br,bl
     cursor: pointer;
     .fas {
-        color: $white;
+        color: $white;  //--> var, color.scss
         font-size: 1.4375rem;
          
     }
@@ -286,15 +293,15 @@
     &:hover {
         background-color: rgba(#000,0.1);
     }
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
 
         height: 56px;
         margin-right: 0;
         padding: 7px 20px 3px;
-        background-color: $lightgrey-scheme; //--> from colors.scss
+        background-color: $lightgrey-scheme;  //--> var, color.scss
         border: none;
         &:hover {
-            background-color: $lightgrey-hover; //--> from colors.scss
+            background-color: $lightgrey-hover; //--> var, color.scss
         }
 
     }
@@ -305,7 +312,7 @@
 
     //#(m)#
     margin-right: 20px;
-    @media (min-width: $scr-small) { //--> from media.scss
+    @media (min-width: $scr-small) {
         margin-right: 0px;
     }
 
@@ -320,10 +327,10 @@
     height: 56px;
     margin-left: 20px;
     padding: 5px 15px; //--> left/right, top/bottom
-    background-color: $darkgrey-scheme; //--> from colors.scss
+    background-color: $darkgrey-scheme;  //--> var, color.scss
     border: none;
     border-radius: 3px;
-    color: $white; //--> from colors.scss
+    color: $white;  //--> var, color.scss
     font-size: .75rem;
     text-transform: uppercase;
     cursor: pointer;
@@ -332,7 +339,7 @@
         transform: scaleX(2);
     }
     &:hover {
-        background-color: $menu-hover; //--> from colors.scss
+        background-color: $menu-hover; //--> var, color.scss
     }
 
 }
@@ -348,10 +355,10 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    background-color: $darkgrey-scheme; //--> from colors.scss
+    background-color: $darkgrey-scheme; //--> var, color.scss
     //#(m)#
     display: none;
-    @media (min-width: $scr-med) { //--> from media.scss
+    @media (min-width: $scr-med) {
         display: inline-flex;
     }
 
@@ -366,9 +373,9 @@
     align-items: center;
     padding-top: 17px;
     padding-bottom: 17px;
-    border-left: 1px solid rgba($white, 0.1); //--> from colors.scss
+    border-left: 1px solid rgba($white, 0.1); //--> var, color.scss
     border-right: 1px solid rgba(#000, 0.25);
-    color: $white; //--> from colors.scss
+    color: $white;
     font-size: 1.125rem;
     cursor: pointer;
     .fas {
@@ -391,7 +398,7 @@
     } 
     //#(m)#
     width: 154px;
-    @media (min-width: $scr-lg) { //--> from media.scss
+    @media (min-width: $scr-lg) {
         width: 196px;
     }
     
@@ -399,47 +406,49 @@
 
 
 .web-link {
-    @include navButtonScheme($vl-purple, $vd-purple); //--> from colors.scss
+    @include navButtonScheme($vl-purple, $vd-purple); //--> var, color.scss (x2)
 }
 
 .it-link {
-    @include navButtonScheme($vl-blue, $vd-blue); //--> from colors.scss
+    @include navButtonScheme($vl-blue, $vd-blue); //--> var, color.scss (x2)
 }
 
 .tele-link {
-    @include navButtonScheme($vl-red, $vd-red); //--> from colors.scss
+    @include navButtonScheme($vl-red, $vd-red); //--> var, color.scss (x2)
 }
 
 .soft-link {
-    @include navButtonScheme($vl-grey, $vd-grey); //--> from colors.scss
+    @include navButtonScheme($vl-grey, $vd-grey); //--> var, color.scss (x2)
 }
 
 .market-link {
-    @include navButtonScheme($vl-green, $vd-green); //--> from colors.scss
+    @include navButtonScheme($vl-green, $vd-green); //--> var, color.scss (x2)
 }
 
 .secur-link {
-    @include navButtonScheme($vl-pink, $vd-pink); //--> from colors.scss
+    @include navButtonScheme($vl-pink, $vd-pink); //--> var, color.scss (x2)
 }
 
 .dropdown-container {
 
     position: absolute;
+    top: 102px;
     left: 0;
     width: 99vw;
-    top: 102px;
-    //#(m)#
+    //#(m)#s
     font-size: .8125rem;
-    @media (min-width: $scr-lg) { //--> from media.scss
+    @media (min-width: $scr-lg) {
         font-size: 1rem;
     }
 
 }
 
 .right-align {
+
     margin-right: auto;
     //#(m)#
     @media (min-width: $scr-med) {
+
         &.align-one {
             width: 102px;
         }
@@ -458,8 +467,10 @@
         &.align-six {
             width: 64px;
         }
+
     }
     @media (min-width: $scr-lg) {
+
         &.align-one {
             width: 116px;
         }
@@ -478,6 +489,7 @@
         &.align-six {
             width: 66px;
         }
+
     }
     
 }
@@ -500,31 +512,32 @@
     li {
 
         display: flex;
-        &::after {
-            content: "-"; //--> adds dash to dropdown items
-            padding-left: 30px;
-        }
         &:first-of-type {
             margin-left: auto;
         }
         &:nth-of-type(n+2) {
             padding-left: 30px;
         }
+        &::after {
+            content: "-"; //--> adds dash to dropdown items
+            padding-left: 30px;
+        }
         &:last-of-type::after {
             content: none; //--> stops dash at end of list
         }
+
     }
     //#(m)#
     @media (max-width: $scr-lg) {
 
         li {
 
-            display: flex;
-            &::after {
-                content: "-"; //--> adds dash to dropdown items
+            display: flex; 
+            &:nth-of-type(n+2) {
                 padding-left: 20px;
             }
-            &:nth-of-type(n+2) {
+            &::after {
+                content: "-"; //--> adds dash to dropdown items
                 padding-left: 20px;
             }
 
@@ -541,6 +554,12 @@
 
 //--|| @ bannerButton Log ||---------
 //  *** header.scss
-//      *   .support-container
-//      *   .banner-container
+//      **  .support-container (#185)
+//      **  .contact-container (#192)
+//      **  .web-link (#405)
+//      **  .it-link (#413)
+//      **  .tele-link (#417)
+//      **  .soft-link (#421)
+//      **  .market-link (#425)
+//      **  .secur-link (#429)
 //-----------------------------------

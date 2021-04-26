@@ -10,13 +10,14 @@
 
 
 //--|| Break Section ||------------------
+
 .break-div {
 
     position: relative;
     height: 104px;
-    background-color: $white;
+    background-color: $white; //--> var, color.scss
     box-shadow: 0 5px 35px rgba(#000,0.1);
-    color: $darkgrey-scheme;
+    color: $darkgrey-scheme; //--> var, color.scss
     font-size: 1.25rem;
     text-transform: uppercase;
     * {
@@ -32,13 +33,14 @@
         left: 0;
         width: 72px;
         height: 5px;
-        background-color: $darkgrey-scheme;
+        background-color: $darkgrey-scheme; //--> var, color.scss
     
     }
     
 }
 
 .break-align {
+
     position: relative;
     width: 1200px;
     margin-left: auto;
@@ -54,12 +56,14 @@
     @media (min-width: $scr-lg) {
         width: 1200px;
     }
+
 }
 
 //-----------------------------------
 
 
 //--|| News Cards ||-----------------
+
 .news-cards {
 
     display: flex;
@@ -67,10 +71,10 @@
     z-index: 1;
     margin-top: 50px;
     margin-right: 15px;
-    background-color: $white;
+    background-color: $white; //--> var, color.scss
     a {
         text-decoration: none;
-        color: $grey;
+        color: $grey; //--> var, color.scss
     }
     //#(m)#
     flex-direction: column;
@@ -84,10 +88,9 @@
     
     position: relative;
     margin-left: 15px;
-    
     margin-bottom: 50px;
-    border: 1px solid $offwhite;
-    border-top-color: $white;
+    border: 1px solid $offwhite; //--> var, color.scss
+    border-top-color: $white; //--> var, color.scss
     border-top-style: solid;
     border-top-width: 1px;
     border-radius: 3px;
@@ -95,48 +98,48 @@
     &:nth-of-type(1) {
 
         .news-img-container p {
-            background-color: $vl-purple;
+            background-color: $vl-purple; //--> var, color.scss
         }
         h3 {
-            color: $vl-purple;
+            color: $vl-purple; //--> var, color.scss
         }
         .news-button {
-            background-color: $vl-purple;
+            background-color: $vl-purple; //--> var, color.scss
         }
         .news-button:hover {
-            background-color: $vd-purple;
+            background-color: $vd-purple; //--> var, color.scss
         }
         
     }
     &:nth-of-type(2) {
 
         .news-img-container p {
-            background-color: $vl-red;
+            background-color: $vl-red; //--> var, color.scss
         }
         h3 {
-            color: $vl-red;
+            color: $vl-red; //--> var, color.scss
         }
         .news-button {
-            background-color: $vl-red;
+            background-color: $vl-red; //--> var, color.scss
         }
         .news-button:hover {
-            background-color: $vd-red;
+            background-color: $vd-red; //--> var, color.scss
         }
         
     }
     &:nth-of-type(3) {
 
         .news-img-container p {
-            background-color: $vl-purple;
+            background-color: $vl-purple; //--> var, color.scss
         }
         h3 {
-            color: $vl-purple;
+            color: $vl-purple; //--> var, color.scss
         }
         .news-button {
-            background-color: $vl-purple;
+            background-color: $vl-purple; //--> var, color.scss
         }
         .news-button:hover {
-            background-color: $vd-purple;
+            background-color: $vd-purple; //--> var, color.scss
         }
         
     }
@@ -157,15 +160,18 @@
         width: 370px;
         height: 583.067px;
     }
+
 }
 
 .card-news:nth-of-type(3) {
+
     @media (min-width: $scr-small) {
         display: none;
     }
     @media (min-width: $scr-lg) {
         display: inline;
     }
+
 }
 
 .news-img-container {
@@ -188,8 +194,8 @@
         top: 10px;
         right: 0;
         padding: 0 10px;
-        background-color: $vl-red;
-        color: $white;
+        background-color: $vl-red; //--> var, color.scss
+        color: $white; //--> var, color.scss
         font-size: .75rem;
         font-weight: bold;
         line-height: 1.438rem;
@@ -241,7 +247,6 @@
         margin-bottom: 30px;
     }
 
-
 }
 
 .news-button {
@@ -251,8 +256,8 @@
     margin-right: 30px;
     padding: 5px 15px;
     border-radius: 3px;
-    line-height: 35px;
     color: $white;
+    line-height: 35px;
     font-size: 1.063rem;
     text-transform: uppercase;
     cursor: pointer;
@@ -268,7 +273,7 @@
     margin-left: 30px;
     margin-right: 30px;
     padding-top: 15px;
-    border-top: 1px solid $offwhite;
+    border-top: 1px solid $offwhite; //--> var, color.scss
     
 }
 

@@ -21,17 +21,19 @@ html * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+
 //--
 
 // Body
 body {
 
-    background-color: $white; //--> from colors.scss
-    color: $grey; //--> from colors.scss
+    background-color: $white; //--> var, color.scss
+    color: $grey; //--> var, color.scss
     letter-spacing: .4px;
     line-height: 1.42857143;
 
 }
+
 //--
 
 //-----------------------------------

@@ -17,11 +17,11 @@ $pop-northern: 136.717px + 40px;
 $clients-height-small: 145.117px;
 $clients-height-med: 162.833px;
 $clients-height-lg: 170px;
-
 //-----------------------------------
 
 
 //--|| Functions ||------------------
+
 @function pop-left($img-width) {
     $left-width: 0 - ((260px - $img-width) / 2);
     @return $left-width;
@@ -31,6 +31,7 @@ $clients-height-lg: 170px;
 
 
 //--|| Rules ||----------------------
+
 #clients {
 
     justify-content: center;
@@ -40,8 +41,8 @@ $clients-height-lg: 170px;
     padding-bottom: 50px;
     padding-left: 39px;
     padding-right: 39px;
-    background-color: $white;
-    box-shadow: 0px -50px 0 0 $white, 
+    background-color: $white; //--> var, color.scss
+    box-shadow: 0px -50px 0 0 $white,  //--> var, color.scss
     0 5px 35px rgba(#000,.1) inset;
     //#(m)#
     display: none;
@@ -167,8 +168,8 @@ $clients-height-lg: 170px;
     position: absolute;
     width: 220px;
     padding: 20px;
-    background-color: $darkgrey-scheme;
-    color: $white;
+    background-color: $darkgrey-scheme; //--> var, color.scss
+    color: $white; //--> var, color.scss
     text-align: center;
     &.pop-busseys {
         top: - $pop-busseys;
@@ -189,7 +190,7 @@ $clients-height-lg: 170px;
         bottom: -34px;
         width: 0;
         height: 0;
-        border-top: 35px solid $darkgrey-scheme;
+        border-top: 35px solid $darkgrey-scheme; //--> var, color.scss
         border-left: 36px solid transparent;
         border-right: 36px solid transparent;
         border-bottom: none;
@@ -245,7 +246,6 @@ $clients-height-lg: 170px;
 
     }
     
-
 }
 
 
@@ -264,7 +264,7 @@ $clients-height-lg: 170px;
     width: 28px;
     height: 3px;
     margin-bottom: 11px;
-    background-color: $white;
+    background-color: $white; //--> var, color.scss
 
 }
 
@@ -277,4 +277,61 @@ $clients-height-lg: 170px;
     
 }
 
+//-----------------------------------
+
+//--|| $pop-busseys Log ||-----------
+//  *** clients.scss
+//      *   .pop-up
+//          **  &.pop-busseys (#175)
+//-----------------------------------
+
+
+//--|| $pop-crane Log ||-----------
+//  *** clients.scss
+//      *   .pop-up
+//          **  &.pop-crane (#178)
+//-----------------------------------
+
+
+//--|| $pop-beat Log ||-----------
+//  *** clients.scss
+//      *   .pop-up
+//          **  &.pop-beat (#181)
+//-----------------------------------
+
+
+//--|| $pop-northern Log ||-----------
+//  *** clients.scss
+//      *   .pop-up
+//          **  &.pop-northern (#184)
+//-----------------------------------
+
+
+//--|| $clients-height-small Log ||---
+//  *** clients.scss
+//      *   #clients
+//          **  @media (min-width: $scr-small) (#51)
+//      *   .client-item
+//          *   @media (min-width: $scr-small)
+//              **  &:hover (#83)
+//-----------------------------------
+
+
+//--|| $clients-height-med Log ||-----
+//  *** clients.scss
+//      *   #clients
+//          **  @media (min-width: $scr-med) (#54)
+//      *   .client-item
+//          *   @media (min-width: $scr-med)
+//              **  &:hover (#90)
+//-----------------------------------
+
+
+//--|| $clients-height-lg Log ||------
+//  *** clients.scss
+//      *   #clients
+//          **  @media (min-width: $scr-lg) (#57)
+//      *   .client-item
+//          *   @media (min-width: $scr-lg)
+//              **  &:hover (#99)
 //-----------------------------------

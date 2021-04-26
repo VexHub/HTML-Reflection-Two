@@ -10,18 +10,19 @@
 
 
 //--|| Rules ||----------------------
+
 footer {
 
     display: flex;
     justify-content: center;
-    background-color: $darkgrey-scheme;
-    color: $white;
+    background-color: $darkgrey-scheme; //--> var, color.scss
+    color: $white; //--> var, color.scss
 
 }
 
 footer a {
 
-    color: $white;
+    color: $white; //--> var, color.scss
     text-decoration: none;
     cursor: pointer;
     &:hover {
@@ -106,8 +107,11 @@ footer a {
 }
 
 .col-list {
+
     list-style-type: none;
     padding-inline-start: 0;
+    padding-left: 0;
+    
 }
 
 .col-items {

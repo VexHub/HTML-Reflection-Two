@@ -7,7 +7,6 @@
 }
 
 #carousel a {
-  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +22,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
 }
 
 #carousel a:visited,
@@ -144,6 +144,7 @@
   width: 183px;
   height: auto;
   margin-bottom: 0;
+  margin-left: 0;
   padding: 5px 20px;
   background-color: #926fb1;
   border-color: #926fb1;
@@ -153,7 +154,6 @@
   line-height: 50px;
   text-align: center;
   cursor: pointer;
-  margin-left: 0;
 }
 
 .carousel-button:hover {

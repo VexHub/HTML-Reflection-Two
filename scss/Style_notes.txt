@@ -128,9 +128,9 @@
     dashes from end to fit.
 
 *   They log should be made in this format: 
-            //  *** file_name.scss
+            //  *** file_name.scss 
             //      *   selector containing nested selector with rule
-            //          **   nested selector containing rule
+            //          **   nested selector containing rule (line#)
             //  *** next_file_name.scss
             //      **  selector containing rule
-            //          **   nested selector also containing rule
+            //          **   nested selector also containing rule (line#)
