@@ -1,0 +1,114 @@
+{
+    "ul": {
+        "training": {
+            "text": "Training",
+            "link": "https://www.netmatters.co.uk/scs-web-developer-course",
+            "li": {
+                "webDevCourse": {
+                    "text": "Web Developer Course",
+                    "link": "https://www.netmatters.co.uk/scs-web-developer-course"
+                },
+                "scsFaq": {
+                    "text": "SCS Frequently Asked Questions",
+                    "link": "https://www.netmatters.co.uk/scs-web-developer-course/scion-scheme-frequently-asked-questions"
+                },
+                "scionColab": {
+                    "text": "Scion Collaborators",
+                    "link": "https://www.netmatters.co.uk/scs-web-developer-course/scion-collaborators"
+                }
+            }
+        },
+        
+        "events": {
+            "text": "Events",
+            "link": "https://www.netmatters.co.uk/business-automation-seminar",
+            "li": {
+                "busAutoSem": {
+                    "text": "Business Automation Seminar",
+                    "link": "https://www.netmatters.co.uk/business-automation-seminar"
+                }
+            }
+        },
+
+        "ourCompany": {
+            "text": "Our Company",
+            "link": "https://www.netmatters.co.uk/our-culture",
+            "li": {
+                "culture": {
+                    "text": "Our Culture",
+                    "link": "https://www.netmatters.co.uk/our-culture"
+                },
+                "team": {
+                    "text": "Our Team",
+                    "link": "https://www.netmatters.co.uk/team"
+                },
+                "careers": {
+                    "text": "Our Careers",
+                    "link": "https://www.netmatters.co.uk/our-careers"
+                },
+                "benefits": {
+                    "text": "Our Benefits",
+                    "link": "https://www.netmatters.co.uk/our-benefits"
+                },
+                "itSupport": {
+                    "text": "IT Support Great Yarmouth",
+                    "link": "https://www.netmatters.co.uk/it-support-in-great-yarmouth"
+                }
+            }
+        },
+
+        "ourWork": {
+            "text": "Our Work",
+            "link": "https://www.netmatters.co.uk/case-studies",
+            "li": {
+                "caseStudies": {
+                    "text": "Case Studies",
+                    "link": "https://www.netmatters.co.uk/case-studies"
+                }
+            }
+        },
+
+        "ourKnowledge": {
+            "text": "Our Knowledge",
+            "link": "https://www.netmatters.co.uk/guides",
+            "li": {
+                "guides": {
+                    "text": "Guides",
+                    "link": "https://www.netmatters.co.uk/guides"
+                },
+                "news": {
+                    "text": "News",
+                    "link": "https://www.netmatters.co.uk/articles"
+                },
+                "insights": {
+                    "text": "Insights",
+                    "link": "https://www.netmatters.co.uk/insights"
+                }
+            }
+        },
+        "covidRiskAssessments": {
+            "text": "COVID Risk Assessments",
+            "link": "https://www.netmatters.co.uk/covid-risk-assessments",
+            "li": {
+            }
+        },
+        "contactUs": {
+            "text": "Contact Us",
+            "link": "https://www.netmatters.co.uk/contact-us",
+            "li": {
+                "cambridge": {
+                    "text": "Cambridge Office",
+                    "link": "https://www.netmatters.co.uk/cambridge-office"
+                },
+                "wymondham": {
+                    "text": "Wymondham Office",
+                    "link": "https://www.netmatters.co.uk/wymondham-office"
+                },
+                "yarmouth": {
+                    "text": "Greath Yarmouth Office",
+                    "link": "https://www.netmatters.co.uk/yarmouth-office"
+                }
+            }
+        }
+    }
+}
