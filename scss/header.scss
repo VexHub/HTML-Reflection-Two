@@ -48,7 +48,13 @@
 
 .header-placer {
     width: 100%;
-    height: 212.717px;
+    height: 168px;
+    @media(min-width: $scr-small) {
+        height: 110px;
+    }
+    @media(min-width: $scr-med) {
+        height: 212.717px;
+    }
 }
 
 .placer-up {
@@ -87,6 +93,14 @@
     top: 0;
     left: 0;
     z-index: 9;
+    @media(min-width: $scr-small) {
+        padding-left: calc(50% - 375px);
+        padding-right: calc(50% - 375px);
+    }
+    @media(min-width: $scr-med) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .header-hidden {
     position: fixed;
@@ -111,6 +125,7 @@
     justify-content: right;
     width: 100%;
     height: 168px - 40px;
+   
     @media (min-width: $scr-small) {
 
         justify-content: center;
@@ -134,9 +149,11 @@
     align-self: flex-start;
     cursor: pointer;
     //#(m)#
-    flex-basis: 200px;
+    flex-basis: 33px;
     flex-grow: 1;
     margin-left: 20px;
+    margin-top: auto; //CHROME FIX
+    margin-bottom: auto; //CHROME FIX
     @media (min-width: $scr-small) {
 
         flex: 0 0 345px; //--> IE11 Fix
@@ -351,24 +368,90 @@
     align-items: center;
     height: 56px;
     margin-left: 20px;
-    padding: 5px 15px; //--> left/right, top/bottom
-    background-color: $darkgrey-scheme;  //--> var, color.scss
+    padding: 5px 12px;
+    background-color: #333645;
     border: none;
     border-radius: 3px;
-    color: $white;  //--> var, color.scss
+    color: #fff;
     font-size: .75rem;
     text-transform: uppercase;
     cursor: pointer;
     span {
         font-size: 21px;
-        transform: scaleX(2);
+        transform: scaleX(1);
+        background-color: #fff;
     }
     &:hover {
         background-color: $menu-hover; //--> var, color.scss
     }
-
 }
 
+.menu-button span {
+    font-size: 21px;
+    transform: scaleX(1);
+    background-color: #fff;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.hamburger-box {
+    width: 33px;
+    height: 21px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger--slider .hamburger-inner {
+    top: -5px;
+}
+
+.hamburger--slider.is-active .hamburger-box{
+    background-color: #333645;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+    background-color: #fff;
+    height: 3px;
+}
+
+.hamburger--slider.is-active .hamburger-inner::after{
+    background-color: #fff;
+    height: 3px;
+    transform: translate3d(0, -3px, 0) rotate(-90deg);
+}
+
+.hamburger--slider .hamburger-inner::before {
+    top: 12px;
+}
+
+.hamburger--slider .hamburger-inner::after {
+    top: 3px;
+    bottom: -10px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 33px;
+    height: 6px;
+    border-radius: 0;
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+    transform: rotate(225deg);
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top .1s ease-out,opacity .1s ease-out .12s;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+}
 //-----------------------------------
 
 
@@ -570,6 +653,13 @@
 
     }
 
+}
+
+.left-header {
+    margin-left: -367px;
+    width: 100%;
+    overflow-y: hidden;
+    
 }
 
 //--

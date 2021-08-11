@@ -2,8 +2,10 @@
   background-color: #fff;
   margin: auto;
   color: #666;
-  width: 600px;
-  height: 487.6px;
+  width: calc(100% - 60px);
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   position: fixed;
   z-index: 11;
   top: 0;
@@ -13,6 +15,16 @@
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
+  height: 487.6px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  #cookie-popup {
+    width: 600px;
+    overflow: hidden;
+  }
 }
 
 .cookie-heading {
@@ -37,7 +49,7 @@
 .cookie-buttons-container {
   width: 100%;
   border-top: 1px solid #e5e5e5;
-  padding: 19px 35px 20px 35px;
+  padding: 19px 35px 20px 0px;
 }
 
 .cookie-button {
@@ -51,10 +63,19 @@
   color: #fff;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(100% - 30px);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .cookie-button {
+    width: calc(50% - 33px);
+  }
 }
 
 #cookie-change {
   background-color: #999aa2;
+  margin-bottom: 20px;
 }
 
 #cookie-change:hover {
@@ -70,12 +91,57 @@
 }
 
 #cookie-screen {
-  width: 1200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  #cookie-screen {
+    width: 750px;
+    padding-left: calc(50vw - 375px + 5px);
+    padding-right: calc(50vw - 375px - 5px);
+  }
+}
+
+@media (min-width: 992px) {
+  #cookie-screen {
+    width: 970px;
+    padding-left: calc(50vw - 485px + 5px);
+    padding-right: calc(50vw - 485px - 5px);
+  }
+}
+
+@media (min-width: 1260px) {
+  #cookie-screen {
+    width: 1200px;
+    padding-left: calc(50vw - 600px + 5px);
+    padding-right: calc(50vw - 600px - 5px);
+  }
+}
+
+#cookie-screen > * {
+  margin-right: 15px;
+  padding-left: 0;
+}
+
+.screen-heading {
+  font-weight: 400;
+  margin: 0px;
+  color: #333645;
+  padding-bottom: 0;
 }
 
 .screen-text {
   font-size: 14px;
-  margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: 1.1;
@@ -84,7 +150,7 @@
 .screen-sub {
   font-size: 2.25rem;
   font-weight: 400;
-  margin: 20px 0 28px 20px;
+  margin: 20px 0 28px 0px;
   color: #333645;
 }
 
@@ -92,10 +158,12 @@
   display: block;
   margin-top: 10px;
   font-size: 1rem;
+  color: #333645;
 }
 
 .screen-list {
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 
 .screen-item {
@@ -111,5 +179,95 @@
   -webkit-margin-end: 0px;
           margin-inline-end: 0px;
   list-style-position: inside;
+}
+
+.screen-item a {
+  color: #333645;
+  text-decoration: none;
+}
+
+.screen-item a:hover {
+  text-decoration: underline;
+}
+
+.screen-button-container {
+  margin-left: auto;
+  width: 195px;
+}
+
+.screen-button-container:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
+.screen-button {
+  color: #aaa;
+  background-color: #fff;
+  border-color: #f0f0f0;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.screen-grey {
+  color: #fff;
+  background-color: #999aa2;
+  border-color: #999aa2;
+  border: none;
+  padding-left: 15px !important;
+}
+
+.screen-grey:hover {
+  background-color: #84858f;
+}
+
+.screen-selected {
+  background-color: #926fb1;
+  color: #fff;
+  border: none;
+}
+
+.screen-selected:hover {
+  background-color: #7e57a0;
+}
+
+#details {
+  margin-top: 20px;
+}
+
+#screen-accept {
+  background-color: #926fb1;
+  color: #fff;
+}
+
+#screen-accept:hover {
+  background-color: #7e57a0;
+}
+
+.screen-bottom-buttons {
+  margin-left: auto;
+  width: 283px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.block-overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.pointer {
+  cursor: pointer;
 }
 /*# sourceMappingURL=cookie.css.map */

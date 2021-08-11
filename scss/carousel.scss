@@ -10,7 +10,11 @@
 
 
 //--|| Rules ||----------------------
-li.glide__slides {
+#carousel {
+    width: 100%;
+}
+
+.slick-slide {
     width: 100%;
     min-height: 490.2px;
     height: calc(100vh - 212.717px);
@@ -34,34 +38,132 @@ li.glide__slides {
 
 .carousel-text {
     position: absolute;
-    z-index: 1;
+    z-index: 6;
     left: 0px;
     top: 0px;
     background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
     width: 100%;
     height: 100%;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin: 0 0 25px;
+        font-weight: 400;
+        line-height: 1.1;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    p {
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+        margin: 0 0 35px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    @media (min-width: $scr-med) {
+        h1 {
+            width: 950px;
+            text-align: left;
+        }
+        p {
+            width: 950px;
+            text-align: left;
+        }
+    }
+    @media (min-width: $scr-lg) {
+        h1 {
+            width: 1200px;
+        }
+        p {
+            width: 1200px;
+        }
+    }
 }
 
 .carousel-button {
 
     vertical-align: middle;
-    width: 183px;
+    width: 225px;
     height: auto;
     margin-bottom: 0;
-    margin-left: 0;
     padding: 5px 20px;
-    background-color: $vl-purple; //--> var, color.scss
-    border-color: $vl-purple; //--> var, color.scss
+    border: none;
+    // border-color: $vl-purple; //--> var, color.scss
     border-radius: 3px;
     color: $white; //--> var, color.scss
     font-size: 1.25rem; 
     line-height: 50px;
     text-align: center;
     cursor: pointer;
-    &:hover {
-        background-color: $vd-purple; //--> var, color.scss
+    margin-left: calc(50% - 106.5px);
+    text-transform: uppercase;
+    .fas {
+        display: inline;
+        padding-left: 12px;
+    }
+    @media(min-width: $scr-med) {
+        margin-left: calc(50% - 475px);
+    }
+    @media(min-width: $scr-lg) {
+        margin-left: calc(50% - 600px);
     }
 
+}
+
+.carousel-design {
+    background-color: $vl-purple;
+    &:hover {
+        background-color: $vd-purple;
+    }
+}
+
+.carousel-it {
+    background-color: $vl-blue;
+    &:hover {
+        background-color: $vd-blue;
+    }
+}
+
+.carousel-telecoms {
+    background-color: $vl-red;
+    &:hover {
+        background-color: $vd-red;
+    }
+}
+
+.carousel-software {
+    background-color: $vl-grey;
+    &:hover {
+        background-color: $vd-grey;
+    }
+}
+
+.carousel-marketing {
+    background-color: $vl-green;
+    width: 346px;
+    margin-left: calc(50% - 173px);
+    &:hover {
+        background-color: $vd-green;
+    }
+    @media(min-width: $scr-med) {
+        margin-left: calc(50% - 475px);
+    }
+    @media(min-width: $scr-lg) {
+        margin-left: calc(50% - 600px);
+    }
+}
+
+.carousel-security {
+    background-color: $vl-pink;
+    &:hover {
+        background-color: $vd-pink;
+    }
 }
 
 div.glide__bullets {
@@ -95,15 +197,36 @@ button.glide__bullet {
     background-color: #fff;
 }
 
-.block-overlay {
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff;
-    opacity: 0.5;
-    z-index: 10;
-    position: fixed;
-    left: 0;
-    top: 0;
+.slick-dots {
+    bottom: 44px;
+
 }
+.slick-dots li {
+    margin: 0 10px;
+}
+
+.slick-dots li.slick-active {
+    border-radius: 100%;
+    box-shadow: 0 0 0 2pt #fff;
+    opacity: 1;
+}
+.slick-dots li button {
+    width: 19px; //FIX
+}
+
+.slick-dots li button:before {
+    font-size: 11px;
+    color: hsla(0,0%,100%,.5);
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    opacity: 1;
+    padding-top: 1px; //CHROME FIX
+    padding-left: 1px; //IE11 FIX
+    width: 19px; //FIX
+}
+
 
 //-----------------------------------

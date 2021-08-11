@@ -1,4 +1,8 @@
-li.glide__slides {
+#carousel {
+  width: 100%;
+}
+
+.slick-slide {
   width: 100%;
   min-height: 490.2px;
   height: calc(100vh - 212.717px);
@@ -19,34 +23,160 @@ li.glide__slides {
 
 .carousel-text {
   position: absolute;
-  z-index: 1;
+  z-index: 6;
   left: 0px;
   top: 0px;
   background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
   width: 100%;
   height: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel-text h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0 0 25px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.carousel-text p {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin: 0 0 35px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .carousel-text h1 {
+    width: 950px;
+    text-align: left;
+  }
+  .carousel-text p {
+    width: 950px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1260px) {
+  .carousel-text h1 {
+    width: 1200px;
+  }
+  .carousel-text p {
+    width: 1200px;
+  }
 }
 
 .carousel-button {
   vertical-align: middle;
-  width: 183px;
+  width: 225px;
   height: auto;
   margin-bottom: 0;
-  margin-left: 0;
   padding: 5px 20px;
-  background-color: #926fb1;
-  border-color: #926fb1;
+  border: none;
   border-radius: 3px;
   color: #fff;
   font-size: 1.25rem;
   line-height: 50px;
   text-align: center;
   cursor: pointer;
+  margin-left: calc(50% - 106.5px);
+  text-transform: uppercase;
 }
 
-.carousel-button:hover {
+.carousel-button .fas {
+  display: inline;
+  padding-left: 12px;
+}
+
+@media (min-width: 992px) {
+  .carousel-button {
+    margin-left: calc(50% - 475px);
+  }
+}
+
+@media (min-width: 1260px) {
+  .carousel-button {
+    margin-left: calc(50% - 600px);
+  }
+}
+
+.carousel-design {
+  background-color: #926fb1;
+}
+
+.carousel-design:hover {
   background-color: #79539a;
+}
+
+.carousel-it {
+  background-color: #4183d7;
+}
+
+.carousel-it:hover {
+  background-color: #286abd;
+}
+
+.carousel-telecoms {
+  background-color: #d64541;
+}
+
+.carousel-telecoms:hover {
+  background-color: #bc2c28;
+}
+
+.carousel-software {
+  background-color: #67809f;
+}
+
+.carousel-software:hover {
+  background-color: #526781;
+}
+
+.carousel-marketing {
+  background-color: #2ecc71;
+  width: 346px;
+  margin-left: calc(50% - 173px);
+}
+
+.carousel-marketing:hover {
+  background-color: #25a25a;
+}
+
+@media (min-width: 992px) {
+  .carousel-marketing {
+    margin-left: calc(50% - 475px);
+  }
+}
+
+@media (min-width: 1260px) {
+  .carousel-marketing {
+    margin-left: calc(50% - 600px);
+  }
+}
+
+.carousel-security {
+  background-color: #f62459;
+}
+
+.carousel-security:hover {
+  background-color: #de093f;
 }
 
 div.glide__bullets {
@@ -82,14 +212,36 @@ button.glide__bullet:hover {
   background-color: #fff;
 }
 
-.block-overlay {
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  opacity: 0.5;
-  z-index: 10;
-  position: fixed;
-  left: 0;
-  top: 0;
+.slick-dots {
+  bottom: 44px;
+}
+
+.slick-dots li {
+  margin: 0 10px;
+}
+
+.slick-dots li.slick-active {
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 0 2pt #fff;
+          box-shadow: 0 0 0 2pt #fff;
+  opacity: 1;
+}
+
+.slick-dots li button {
+  width: 19px;
+}
+
+.slick-dots li button:before {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
+  padding-top: 1px;
+  padding-left: 1px;
+  width: 19px;
 }
 /*# sourceMappingURL=carousel.css.map */
