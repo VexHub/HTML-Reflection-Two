@@ -452,6 +452,15 @@
     transform: rotate(-90deg);
     transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
 }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: $darkgrey-scheme;
+}
+// #menu-button:hover .hamburger-inner, 
+#menu-button:hover .hamburger-inner::before, 
+#menu-button:hover .hamburger-inner::after {
+    background-color: $menu-hover;
+}
 //-----------------------------------
 
 

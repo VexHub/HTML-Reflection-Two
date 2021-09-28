@@ -543,6 +543,15 @@
   transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s, -webkit-transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: #333645;
+}
+
+#menu-button:hover .hamburger-inner::before,
+#menu-button:hover .hamburger-inner::after {
+  background-color: #22242e;
+}
+
 .nav-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;

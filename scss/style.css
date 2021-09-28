@@ -565,6 +565,15 @@ body {
   transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s, -webkit-transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: #333645;
+}
+
+#menu-button:hover .hamburger-inner::before,
+#menu-button:hover .hamburger-inner::after {
+  background-color: #22242e;
+}
+
 .nav-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1101,7 +1110,7 @@ button.glide__bullet:hover {
 }
 
 .slick-dots li {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .slick-dots li.slick-active {
@@ -3109,6 +3118,8 @@ footer a:hover {
   margin-left: -275px;
   width: 100%;
   overflow-y: scroll;
+  -webkit-transition: margin-left 0.5s ease-in;
+  transition: margin-left 0.5s ease-in;
 }
 
 @media (min-width: 992px) {
@@ -3120,18 +3131,38 @@ footer a:hover {
 .menu-side {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -350px;
   width: 275px;
   overflow-y: scroll;
   z-index: 11;
   height: 100vh;
   background-color: #333645;
+  -webkit-transition: right 0.5s ease-in;
+  transition: right 0.5s ease-in;
 }
 
 @media (min-width: 992px) {
   .menu-side {
     width: 350px;
   }
+}
+
+#body-container {
+  margin-left: 0;
+  -webkit-transition: margin-left 0.5s ease-in;
+  transition: margin-left 0.5s ease-in;
+}
+
+#body-container.show-menu-side {
+  margin-left: -350px;
+  -webkit-transition: margin-left 0.5s ease-in;
+  transition: margin-left 0.5s ease-in;
+}
+
+#menu-side.show-menu-side {
+  right: 0;
+  -webkit-transition: right 0.5s ease-in;
+  transition: right 0.5s ease-in;
 }
 
 .menu-head {

@@ -9,6 +9,7 @@
     margin-left: -275px;
     width: 100%;
     overflow-y: scroll;
+    transition: margin-left 0.5s ease-in;
     @media(min-width: $scr-med) {
         margin-left: -350px;
     }
@@ -17,15 +18,28 @@
 .menu-side {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -350px;
     width: 275px;
     overflow-y: scroll;
     z-index: 11;
     height: 100vh;
     background-color: $darkgrey-scheme;
+    transition: right 0.5s ease-in;
     @media(min-width: $scr-med) {
         width: 350px;
     }
+}
+#body-container {
+    margin-left: 0;
+    transition: margin-left 0.5s ease-in;
+}
+#body-container.show-menu-side {
+    margin-left: -350px;
+    transition: margin-left 0.5s ease-in;
+}
+#menu-side.show-menu-side {
+    right: 0;
+    transition: right 0.5s ease-in;
 }
 
 .menu-head {

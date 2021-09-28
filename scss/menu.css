@@ -2,6 +2,8 @@
   margin-left: -275px;
   width: 100%;
   overflow-y: scroll;
+  -webkit-transition: margin-left 0.5s ease-in;
+  transition: margin-left 0.5s ease-in;
 }
 
 @media (min-width: 992px) {
@@ -13,18 +15,38 @@
 .menu-side {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -350px;
   width: 275px;
   overflow-y: scroll;
   z-index: 11;
   height: 100vh;
   background-color: #333645;
+  -webkit-transition: right 0.5s ease-in;
+  transition: right 0.5s ease-in;
 }
 
 @media (min-width: 992px) {
   .menu-side {
     width: 350px;
   }
+}
+
+#body-container {
+  margin-left: 0;
+  -webkit-transition: margin-left 0.5s ease-in;
+  transition: margin-left 0.5s ease-in;
+}
+
+#body-container.show-menu-side {
+  margin-left: -350px;
+  -webkit-transition: margin-left 0.5s ease-in;
+  transition: margin-left 0.5s ease-in;
+}
+
+#menu-side.show-menu-side {
+  right: 0;
+  -webkit-transition: right 0.5s ease-in;
+  transition: right 0.5s ease-in;
 }
 
 .menu-head {
