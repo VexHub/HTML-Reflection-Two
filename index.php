@@ -4,7 +4,10 @@
 <?php
 $page = 'index';
 include('inc\head.php');
+//replace with bootstrap
+include('src\db.php');
 ?>
+
 
 
 <body id="index-body">
@@ -256,71 +259,46 @@ include('inc\head.php');
                 <!-- News Cards -->
                 <div class="news-cards">
 
+                <?php 
+                $newsObj = new articleObj();
+                $newsObj->createConnection();
+                $newsObj->runQuery();
+                ?>
+
                     <!-- 1st Card -->
-                    <div class="card-news"> <!--(1)/news-cards-->
-                        <a href="#">
-                            <div class="news-img-container"> <!--(1)/card-news-->
-                                <img src="resources/img/grants-available-for-R76J.jpg" alt="Digital High Street Grants Available For Businesses in Breckland">
-                                <p>News</p> <!--Top-right tab-->
-                            </div>
-                        </a>
-                        <a href="#"><h3 class="news-h3">Grants Available For Breckland Businesses Loo... </h3></a> <!--(2)/card-news-->
-                        <p class="news-p"> <!--(3)/card-news-->
-                            Businesses in Breckland are being offered a fantastic opportunity to embrace the digital worl...
-                        </p>
-                        <a href="#"><div class="news-button">Read More</div></a> <!--(4)/card-news-->
-                        <div class="post-info"> <!--(5)/card-news-->
-                            <img src="resources/img/netmatters-ltd-VXAv.png" alt="Netmatters Ltd" class="info-img">
-                            <div class="info-text">
-                                <strong>Posted by Netmatters Ltd</strong>
-                                25th March 2021 
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                    for ($i = 0; $i <= 2; $i++) {
+                        echo '<div class="card-news">' . "\n" .
+                        '<a href="' . $newsObj->call('Link')[$i] . '">' . "\n" .
+                            '<div class="news-img-container">' . "\n" .
+                                '<img src="' . 
+                                $newsObj->call('Article_Img')[$i] .
+                                '">' . "\n" .
+                                '<p>' . $newsObj->call('Type')[$i] . '</p>' . "\n" .
+                            '</div>' . "\n" .
+                        '</a>' . "\n" .
+                        '<a href="'. $newsObj->call('Link')[$i] . '"><h3 class="news-h3">' .
+                        $newsObj->call('Title')[$i] . 
+                        '</h3></a>' . "\n" .
+                        '<p class="news-p">' . "\n" .
+                            $newsObj->call('Details')[$i] . "\n" .
+                        '</p>' . "\n" .
+                        '<a href="' . $newsObj->call('Link')[$i] . '"><div class="news-button">Read More</div></a>' . "\n" .
+                        '<div class="post-info">' . "\n" .
+                            '<img src="' . 
+                                $newsObj->call('User_Img')[$i] . 
+                                '" class="info-img">' . "\n" .
+                            '<div class="info-text">' . "\n" .
+                                '<strong>Posted by' . $newsObj->call('First_name')[$i] . $newsObj->call('Last_name')[$i] . '</strong>' . "\n" .
+                                $newsObj->call('Date')[$i] . "\n" . 
+                            '</div>' . "\n" .
+                        '</div>' . "\n" .
+                    '</div>' . "\n";
+                    }
+                    ?>
+                    
 
-                    <!-- 2nd Card -->
-                    <div class="card-news"> <!--(2)/news-cards-->
-                        <a href="#">
-                            <div class="news-img-container"> <!--(1)/card-news-->
-                                <img src="resources/img/case-study-warren-t8yt.jpg" alt="">
-                                <p>Case Studies</p> <!--Top-right tab-->
-                            </div>
-                        </a>
-                        <a href="#"><h3 class="news-h3">Case Study Warren Services</h3></a> <!--(2)/card-news-->
-                        <p class="news-p"> <!--(3)/card-news-->
-                            The Client: Warren Services was founded in 1990. They manufacture high-quality components...
-                        </p>
-                        <a href="#"><div class="news-button">Read More</div></a> <!--(4)/card-news-->
-                        <div class="post-info"> <!--(5)/card-news-->
-                            <img src="resources/img/netmatters-ltd-VXAv.png" alt="Netmatters Ltd" class="info-img">
-                            <div class="info-text">
-                                <strong>Posted by Netmatters Ltd</strong>
-                                24th March 2021 
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3rd Card -->
-                    <div class="card-news"> <!--(3)/news-cards-->
-                        <a href="#">
-                            <div class="news-img-container"> <!--(1)/card-news-->
-                                <img src="resources/img/congratulations-to-samuel-pXTR.jpg" alt="Congratulations to Samuel on completing the Scion training scheme">
-                                <p>News</p> <!--Top-right tab-->
-                            </div>
-                        </a>
-                        <a href="#"><h3 class="news-h3">Congratulations to Samuel Merritt for Graduat... </h3></a> <!--(2)/card-news-->
-                        <p class="news-p"> <!--(3)/card-news-->
-                            We are pleased to announce that after spending 10 months on our Scion Coalition Scheme (SCS),...
-                        </p>
-                        <a href="#"><div class="news-button">Read More</div></a> <!--(4)/card-news-->
-                        <div class="post-info"> <!--(5)/card-news-->
-                            <img src="resources/img/netmatters-ltd-VXAv.png" alt="Netmatters Ltd" class="info-img">
-                            <div class="info-text">
-                                <strong>Posted by Netmatters Ltd</strong>
-                                19th March 2021 
-                            </div>
-                        </div>
-                    </div>
+                    
             <!-- // END OF NEWS SECTION // -->
                     
                 </div>
