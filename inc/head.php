@@ -25,6 +25,8 @@
     <?php
     if (!isset($page) || $page == 'index') {
         $pageTitle = 'Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters';
+    } else if ($page == 'contact') {
+        $pageTitle = 'Contact Us | Netmatters';
     }
     echo $pageTitle;
     ?>

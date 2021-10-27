@@ -268,6 +268,7 @@ include('src\db.php');
                     <!-- 1st Card -->
                     <?php
                     for ($i = 0; $i <= 2; $i++) {
+                        $date = DateTime::createFromFormat('Y-m-d', $newsObj->call('Date')[$i]);
                         echo '<div class="card-news">' . "\n" .
                         '<a href="' . $newsObj->call('Link')[$i] . '">' . "\n" .
                             '<div class="news-img-container">' . "\n" .
@@ -289,8 +290,8 @@ include('src\db.php');
                                 $newsObj->call('User_Img')[$i] . 
                                 '" class="info-img">' . "\n" .
                             '<div class="info-text">' . "\n" .
-                                '<strong>Posted by' . $newsObj->call('First_name')[$i] . $newsObj->call('Last_name')[$i] . '</strong>' . "\n" .
-                                $newsObj->call('Date')[$i] . "\n" . 
+                                '<strong>Posted by ' . $newsObj->call('First_name')[$i] . ' ' . $newsObj->call('Last_name')[$i] . '</strong>' . "\n" .
+                                date_format($date, 'd F Y') . "\n" . 
                             '</div>' . "\n" .
                         '</div>' . "\n" .
                     '</div>' . "\n";
@@ -351,26 +352,6 @@ include('src\db.php');
                 </div>
             </div>
 
-        </section>
-
-        <section id="newsletter">
-            <form action="#" id="newsletter-form" class="newsletter-form" method="POST">
-                <h2 class="form-h2">Email Newsletter Sign-Up</h2>
-                <label for="form-name" class="form-label">Your Name <span>*</span></label>
-                <input type="text" id="form-name" class="form-text" name="name" value="">
-                <label for="form-email" class="form-label">Your Email <span>*</span></label>
-                <input type="email" id="form-email" class="form-text" name="email" value="">
-                <div class="check-container">
-                    <input class="form-check" type="checkbox" name="form-check" value="1">
-                    <label for="form-check" class="form-checkset"></label>
-                </div>
-                <p class="form-statement">
-                    Please tick this box if you wish to receive marketing information from us. Please see our  
-                    <a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a>
-                    for more information on how we use your data.
-                </p>
-                <button class="form-button" name="submit">subscribe</button>
-            </form>
         </section>
 
         <?php include('inc\footer.php'); ?>

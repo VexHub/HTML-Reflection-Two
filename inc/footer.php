@@ -1,3 +1,25 @@
+<section id="newsletter">
+            <form action="#" id="newsletter-form" class="newsletter-form" method="POST">
+                <h2 class="form-h2">Email Newsletter Sign-Up</h2>
+                <label for="form-name" class="form-label">Your Name <span>*</span></label>
+                <input type="text" id="form-name" class="form-text" name="name" value="">
+                <label for="form-email" class="form-label">Your Email <span>*</span></label>
+                <input type="email" id="form-email" class="form-text" name="email" value="">
+                <div class="check-container">
+                    <input class="form-check" type="checkbox" name="form-check" value="1">
+                    <label for="form-check" class="form-checkset"></label>
+                </div>
+                <p class="form-statement">
+                    Please tick this box if you wish to receive marketing information from us. Please see our  
+                    <a href="https://www.netmatters.co.uk/privacy-policy">Privacy Policy</a>
+                    for more information on how we use your data.
+                </p>
+                <button class="form-button" name="submit">subscribe</button>
+            </form>
+        </section>
+
+
+
 <footer>
 
             <div id="footer-container">
